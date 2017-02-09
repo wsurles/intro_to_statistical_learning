@@ -1,0 +1,103 @@
+---
+title: "Chapter 1 Notes"
+author: "William Surles"
+date: "Feb 08, 2017"
+output:
+  html_document: default
+  html_notebook:
+    highlight: tango
+    self_contained: yes
+    theme: flatly
+---
+
+```{r set-options, eval=T, echo=F, cache=F}
+
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+
+```
+
+```{r, eval=T, echo=T, cache=F, message=F, warning=F}
+
+library(ISLR)
+library(dplyr)
+library(ggvis)
+
+```
+
+# An Overview of Statistical Learning
+
+  - **Statistical Learning** refers to a vast set of tools for **understanding data**.
+  - These tools are classified as supervised or unsupervised. 
+    - supervised involves building a statitical model for predicting, or estimating, an **output** based on one or more **inputs**.
+    - unsupervised involves inputs but no supervising output, yet we still learn relationships and structure from the data.
+
+A brief look at 3 different types of dataset will illustrate some of the different methods and applications of statistical learning.
+
+## Wage Data
+
+The wage dataset has wage data and some other information. 
+
+```{r, eval=T, echo=T, cache=T, message=F, warning=F}
+
+str(Wage)
+head(Wage)
+  
+```
+
+We would like to be able to predict the persons wage based on the other variables.
+From charting the data (see the book) we can see that wage increases with age, up to about 60 year old, than drops. 
+It also goes up slighlty by year. 
+And it definitely varies by education level. 
+
+```{r, eval=T, echo=T, cache=T, message=F, warning=F}
+
+Wage %>% 
+  ggvis(~age, ~wage) %>% 
+  layer_points(
+    fill := "gray"
+    ) %>%
+  layer_smooths(
+    se = TRUE,
+    fill := "green"
+    )
+
+```
+```{r, eval=T, echo=T, cache=T, message=F, warning=F}
+
+Wage %>% 
+  ggvis(~year, ~wage) %>% 
+  layer_points(
+    fill := "gray"
+    ) %>%
+  layer_smooths(
+    se = TRUE,
+    fill := "green"
+    )
+
+```
+
+```{r, eval=T, echo=T, cache=T, message=F, warning=F}
+
+Wage %>% 
+  ggvis(~education, ~wage) %>% 
+  layer_boxplots(
+    fill := "lightgreen"
+  )
+
+```
+
+Using just one of these variables to predict a persons wage will not be that accurate.
+Using all of them will probably be more accurate. 
+
+We can use linear regression to predict a person wage from these other variables. 
+This is supervised learning because it has clear inputs and outputs. 
+Its also considered a regression problem because it involves prediciting a **continuous** or **quantitative** output value. 
+We will learn a lot more about this in **Chapter 3**.
+
+While using strait lines to predict was how regression techniques started, we have more computing power today and can do better than just using strait lines. Ideally, we will take into account that wage and age have a non-linear relationship. This is discussed more in ** Chapter 7**
+
+## Stock Market Data
+
+## Gene Expression Data
+
+## A Brief History of Statistical Learning

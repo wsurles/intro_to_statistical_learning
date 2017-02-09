@@ -1,0 +1,63 @@
+---
+title: "Chapter 2"
+author: "William Surles"
+date: "Feb 08, 2017"
+output:
+  html_document: default
+  html_notebook:
+    highlight: tango
+    self_contained: yes
+    theme: flatly
+---
+
+```{r set-options, eval=T, echo=F, cache=F}
+
+knitr::opts_chunk$set(fig.width=6, fig.height=4)
+
+```
+
+```{r, eval=T, echo=F, cache=F, message=F, warning=F}
+
+library(stringr)
+
+```
+
+## Chapter 2
+
+`c` is for concatenate, forming a vector `x`
+
+```{r}
+x <- c(1,3,2,5)
+x
+```
+
+The '+' function will add arrays by index (they must have the same length)
+
+```{r}
+x <- c(1,6,2)
+y <- c(1,4,3)
+x + y
+
+```
+
+```{r}
+
+```
+
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
