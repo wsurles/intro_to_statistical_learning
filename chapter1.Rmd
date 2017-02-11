@@ -35,7 +35,8 @@ A brief look at 3 different types of dataset will illustrate some of the differe
 
 ## Wage Data
 
-The wage dataset has wage data and some other information. 
+The wage dataset has yearly wage data for individuals, as well as many other variables. 
+Take a look...
 
 ```{r, eval=T, echo=T, cache=T, message=F, warning=F}
 
@@ -45,9 +46,7 @@ head(Wage)
 ```
 
 We would like to be able to predict the persons wage based on the other variables.
-From charting the data (see the book) we can see that wage increases with age, up to about 60 year old, than drops. 
-It also goes up slighlty by year. 
-And it definitely varies by education level. 
+From charting the data we can see that wage increases with age, up to about 60 year old, than drops. 
 
 ```{r, eval=T, echo=T, cache=T, message=F, warning=F}
 
@@ -58,10 +57,14 @@ Wage %>%
     ) %>%
   layer_smooths(
     se = TRUE,
-    fill := "green"
+    fill := "blue"
     )
 
 ```
+
+There are other variable that show a trend in the wage data. 
+It also goes up slighlty by year. 
+
 ```{r, eval=T, echo=T, cache=T, message=F, warning=F}
 
 Wage %>% 
@@ -71,10 +74,12 @@ Wage %>%
     ) %>%
   layer_smooths(
     se = TRUE,
-    fill := "green"
+    fill := "blue"
     )
 
 ```
+
+And it definitely varies by education level.
 
 ```{r, eval=T, echo=T, cache=T, message=F, warning=F}
 
@@ -94,10 +99,90 @@ This is supervised learning because it has clear inputs and outputs.
 Its also considered a regression problem because it involves prediciting a **continuous** or **quantitative** output value. 
 We will learn a lot more about this in **Chapter 3**.
 
-While using strait lines to predict was how regression techniques started, we have more computing power today and can do better than just using strait lines. Ideally, we will take into account that wage and age have a non-linear relationship. This is discussed more in ** Chapter 7**
+Ideally, when we actually try to figure this out, will take into account that wage and age have a non-linear relationship. This is discussed more in **Chapter 7**
 
 ## Stock Market Data
+With the wage data set we wanted to predict a continuous variable. 
+With the stock marked data we want to predict a **categorical** variable. 
+This is a non-numerical, like... up or down. : ) 
+Instead of quanititative, its a **qualitative** outut. 
+We will examine this more in **Chapter 4**
+This is considered a **classification** problem. 
+In the case of the stock market, this would be a very useful thing to get right!
+
+Lets take a quick look and see if we can strike a jackpot. 
+
+```{r, eval=T, echo=T, cache=T, message=F, warning=F}
+
+str(Smarket)
+head(Smarket)
+
+```
+
+So we can see how much the market went up on a given day and what the changes were on the previous 5 days. 
+Maybe there is a magic trend!
+
+```{r, eval=T, echo=T, cache=T, message=F, warning=F}
+
+Smarket %>% 
+  mutate(yesterday = ifelse(Lag1 > 0, 'Up', 'Down')) %>%
+  ggvis(~yesterday, ~Today) %>% 
+  layer_boxplots(
+    fill = ~yesterday
+  )
+
+Smarket %>% 
+  mutate(two_days_prev = ifelse(Lag2 > 0, 'Up', 'Down')) %>%
+  ggvis(~two_days_prev, ~Today) %>% 
+  layer_boxplots(
+    fill = ~two_days_prev
+  )
+
+Smarket %>% 
+  mutate(three_days_prev = ifelse(Lag3 > 0, 'Up', 'Down')) %>%
+  ggvis(~three_days_prev, ~Today) %>% 
+  layer_boxplots(
+    fill = ~three_days_prev
+  )
+
+
+```
+
+Pretty much no. Just from looking at the box plots its not clear that the market will go up or down today based on what it did in any of the previous 3 days. Alright, we'll have to learn more in Chapter 4 I guess when we examine different statistical methods for predicting the change. 
 
 ## Gene Expression Data
 
+The last two datasets both involved input and output variables. With the Gene dataset we have no corresponding output that we are trying to predict. We just have the data and want to understand how the data points relate to each other. 
+Like, maybe you have demographic data of your user apps user base and want to see how some of the users are similar to others. 
+This is known as a **clustering** problem. 
+We'll talk more about this in **Chapter 10**.
+The visualizations of this type of data are ofter more advanced. I can't do it yet but hopefully I learn how after reading the later chapters.
+
 ## A Brief History of Statistical Learning
+Least squares was the fist implementation of what we now call linear regression. Some dudes created it in the early nineteenth centry. NBD.
+Logistic regression or prediciting a categorical variable, was developed in the 1940s. 
+By the 1970 there were many methods for learning from data, but they were mostly linear methods. Fitting non-linear relationships was still too computationally expensive. Once computing power increased, in the 1980s, clasiification and regression trees were introducted. 
+Now we have machine learning and statistical learning is is own subfield of statistics. 
+
+## This Book
+Its popular because of its topical approach. Also its understandable by a wide audience. 
+At one time only statistian experts could apply statistical approaches to datasets, but with the availability of many software tools now its possible for people from many backgrounds to apply statistical approaches to learn from datasets in many fields. Like me I guess. I'm hoping to do something useful with it after studying it for about a month. 
+
+The authors say... "It is important for this diverse group to be able to understand the models, intuitions, and strengths and weaknesses of the various approaches. But for this audience, many of the technical details behind statistical learning methods, such as optimization algorithms and theoretical properties, are not of primary interest." Cha Brah. You are right about that. 
+
+There are some premises that the authors believe:
+
+  - Many statistical learning methods are relevant and useful in a wide range of academic and non-academic disciplines, beyond just the sta- tistical sciences. 
+    - Linear regression is the original gangster, the hammer. But scrwdrivers and saws, and other tools are useful too and widely available today. But learning every possible tool and variation is not necessary to build a table. This book focuses on the main tools. 
+  - Statistical learning should not be viewed as a series of black boxes. 
+    - You don't need to know how each cog in the the box works to know it is the right box to use for the job. Like a drill or a tooth brush. 
+  - While it is important to know what job is performed by each cog, it is not necessary to have the skills to construct the machine inside the box!     - In other words, you do not need a PhD in toothbrushes to know how to use one. This book avoids matrix algebra. Yay! 
+  - We presume that the reader is interested in applying statistical learning methods to real-world problems. 
+    - I mean, some people might just want to learn this stuff for fun, but I just want to do it so I can solve business problems and make money doing it. I guess thats the real world. R can handle every method in this book and its free, so its used to solve them. Cool. Also, this is the language of choice for acedemic statisticians and new approaches are always available here first. 
+    
+## Who should read this book?
+
+
+
+
+

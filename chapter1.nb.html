@@ -221,8 +221,9 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcblxuYGBgIn0= -->
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)</code></pre></div>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShJU0xSKVxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ISLR)
+<span class="kw">library</span>(dplyr)</code></pre></div>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
 <pre><code>
@@ -236,6 +237,9 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3ZpcylcbmBgYCJ9 -->
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggvis)</code></pre></div>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="an-overview-of-statistical-learning" class="section level1">
@@ -251,7 +255,7 @@ The following objects are masked from ‘package:base’:
 <p>A brief look at 3 different types of dataset will illustrate some of the different methods and applications of statistical learning.</p>
 <div id="wage-data" class="section level2">
 <h2>Wage Data</h2>
-<p>The wage dataset has wage data and some other information.</p>
+<p>The wage dataset has yearly wage data for individuals, as well as many other variables. Take a look…</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKFdhZ2UpXG5gYGAifQ== -->
@@ -275,7 +279,7 @@ The following objects are masked from ‘package:base’:
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChXYWdlKVxuYGBgIn0= -->
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(Wage)</code></pre></div>
 <!-- rnb-source-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTIsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZWT1c4VFFSUWVyOWR4dkhFTzUrQVF6WFpJUUZhS2dRQVNRUTY1b0NDUWd5UTBoTW51Mkx0a1BSUE5qdTJrbzBSQ1ZQVDhDR2lSa0tDZ1JoeWlwNkJBTkZRVUtPR3RkMlo5NEJBQ3hmUE9mRy9tZTk5N2IyYThPTDJXTjlZTWhKQ0drcHFHdENRTWRRMStFa2hIbWZDN2pWQnlDQVpac0Y2d0xvVFNIOEhlZzcyVDlnSHNVOE9QQnNHT2dZMkNuUWJMZzQwRGovSW5PbHRMNEM2ZlZJa2Z3R2lnTGk5QzAyT1dlUVA3UkU0emVjdWNKZVVRYU4yZHNuMGNxTTB4WlJIYmduRVk3WFlRbzBuVG8yOUlwKzFKaHBSa0dJRHc4NkNMZ3dqT1BlSkkzTWhiN2NoWnkxejFIRmFMa1o1emxqbnRWUm0zWXloNzNqS1h5QmJtV0FCV0Q1bmNPNVRvMEpLdEZZeEY2NUtoRzBTdnVwNVFSZXNHc1ZkOWJHK3FPVWlkRER4TTFSeUUzaFF1NFlkV3BFczFlcU9VSGN1WUJVV1h6V3RMNWh6SHpTVnNSZnBCMXhJckUzT0srVDRwS2ZuOUlFOGl6YXNIb1phVFRoVlRLSzg1VFVxY2tFUHAxenBiaS82TVpPaXJINE9hT1VOTFBxYXhndkFRZUk3akUzTlNBQzQ4VzNwR0lKTVpIQWh6bm5IaG1sT0VDbzU5NVlSOFZzayt6bHg0UWxnRjhIYktjVWtaZWRzb0wwaktUczZlaXlDVFZhakFudXE0Y2NreWIySGJLd0w5WVh1dXRWMmY5cHFwbTlzTE5idE9uVW9ndUJkcjZjdUhZSkh4TWhZZW8vOFZQUEdINEpud3dFM01NZVkwQmI0eXNVTDRqbGxILytXa2RIaTlmZ3ZjQllIdmtFQzlTaEIxbnYxTk1OUVhJb1hjekROeTVQTmdJWmNxbm56MzNTa01QUmpvWCtnekM4T25OajROaitIWVA0UXhac2NmeGZzV1g3M081RzY4TFN3OHJaMDQ4V081Y0crOXZGZll5QlhzMjkrK1BuazhFdnZYMzdockw3U2Y3WThueFdXaUhzK3NCUFVkZ3JrY0ozRjhHNU1CMlZZSmxESDNoR3F0enJFZFA5UEVxZGhSaCtWU1RrcU5XZmQ5dGhHOTE5THJFdXdMVngzT2FMYnVVZVZQKzZ4VWEwalE2K1BXRkRLYzFTeVZSdFM0NU1NdktMRTRqclRxTU5MdUhrWG96SE9VZXJteVR6Y01Cd3RzRlRsUVJCMXBvVSt6clRBYklOZkMvMGFqYlhOaStVQ0FIN1NpdjBKRC9jNm83VmJvNXVoWSsvclpUb0RSZENSNzViZXJhWnlOOHRCVnRrYjhkNGx0TjY0bnNWMm1Xa0ZveWFNTlR6Vyt1aWtmYnhBMVNVT2hnMFpIMGpYTXFVZEw2ckpCTStxOXNMYTRSNFdxTUtDQkpaaUlLUTJiK1FxSmJzSHVMNW1aSCtXaENBQUEifQ== -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6MTIsIm5yb3ciOjZ9LCJyZGYiOiJINHNJQUFBQUFBQUFBNlZWdlc4VE1SUjM3aTVOYzZSTjA1WXZzZHlHQlBRa0FoU1FLRXBweThkQW9TM1FzbENjT3lkM2NMRXJuNU8wR3lNU1ltTG5qNEFWQ1FrR1pzU0h1ak13SUJZbUJrUjVsN012SDZTVXd2Qnk5dS9adi9kNzc5bk80dXhLMFZ3eEVVSWEwalVOYVRvTURRMStVc2hBMmVpN2pwQStCb01jMkJEWUFFS1pqMkR2d2Q1Sit3QzIyZmFqVWJBRFlCTmdSOEdLWUpQQW8veXAvdFlWZUNBZ0RSS0VNQnBweVl2UnpISGJ1b29ESXFmWm9tMWRKTFVJNk42ZGRnSWNxczBKWlFVN2duRVkvZXdqUnBObXhOK0lUdHVTREduSk1BTGg1MEVYQnhHYys4U1Z1Rm0wZTVFVHRyWHN1NnlaSUh0TzJ0YXMzMkRjU2FEY0tkdGFJbXVZWXdGWUs2Uyt0U3ZSa2VuZEZVeEVHNUpoRUVRdmU3NVFSUnNFc1JjQzdOeFhjNUE2SGZxWXFqa0l2U1k4d25ldHlKQnFqSFlwKzVZeEI0ck9XWmVYckVzY2Q1YXdHOG1EcmlWV0k5WU1Dd0pTVmZMeklFOGluYXRIb1piVGJnTlRLSzgxUzZxY2tGM3AxL3BibC82c1pCaHVIWU9tTlVlckFhYUpndWdRK0s0YkVHdGFBQzU4UjNyMlFpWnpPQlRXUE9QQ3MyWUlGUndIeWduNUxKTnRuSVhvaExBNjRMMlVrNUl5OXZaUW5wYVUvWng3em9CTVZxY0MrNnJqNWxuYnVvNGR2d0wwdSsyNTFuTjllbXVtYnU0UTFPd0tkZXVoNEg2aVpiZ1lnUlhHYTFqNGpQNVg4TlFmZ21lakF6ZDFpVEczSS9ENXFWdUViMWd0OUY5T1NwL1g2N2ZBQXhENE5nblZxd1JSNTluZkJFUERFVklxekQwait6Nk5sZ3JweXVGMzM5elMySU9SL01Ld1ZSby9VdDRjUDQ0VC94akdtQjE4bE94YmZQVTZXN2o2dHJUd3RIbm8wUGNicGJ1cnRhMVN1VkJ5Ym43OTh1VHgzc1MvK3NaYmVhSDk2SDA4S2E0UjlYam1KR2hzRU16bFdNZkpiZFJEc3E0U3FHSHVDOVZhZzJNbmVhYUpXM2ZpRHN1bG5GVGJzOEY3ckJ5LzE5THJFUndJVHgzT2VMYnFVK1hQQkt6YWJFc3dXdVB1RkxLY05XMlZSdHc0L2VGbmxGcWNSRnBqSEdsMzlpTjA3RGxLdjd5MVRUZE1Gd3RzVnpoUXhCM3Bvcyt3dFNnYklOZWkvMGF6WjNQcXhvNEEzMmxGdms0ai9lNkU0OVhwL1lrVHZlc3Y5Z1BNamlNNUpMOERIZU5jbkllaHNqV1R2MHZzZUVrOWllTXgxUXBDcXo1dGV4ckoxVTBIdUV6VUpBT0ZEdHNkeVRReHB6NnRxc3NHeldqMXdsN2pQaFdxd29DR3RtQWlvVFFkRmlna3ZnVS9md0dWRVhHYW9RZ0FBQT09In0= -->
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["year"],"name":[1],"type":["int"],"align":["right"]},{"label":["age"],"name":[2],"type":["int"],"align":["right"]},{"label":["sex"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["maritl"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["race"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["education"],"name":[6],"type":["fctr"],"align":["left"]},{"label":["region"],"name":[7],"type":["fctr"],"align":["left"]},{"label":["jobclass"],"name":[8],"type":["fctr"],"align":["left"]},{"label":["health"],"name":[9],"type":["fctr"],"align":["left"]},{"label":["health_ins"],"name":[10],"type":["fctr"],"align":["left"]},{"label":["logwage"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["wage"],"name":[12],"type":["dbl"],"align":["right"]}],"data":[{"1":"2006","2":"18","3":"1. Male","4":"1. Never Married","5":"1. White","6":"1. < HS Grad","7":"2. Middle Atlantic","8":"1. Industrial","9":"1. <=Good","10":"2. No","11":"4.318063","12":"75.04315","_rn_":"231655"},{"1":"2004","2":"24","3":"1. Male","4":"1. Never Married","5":"1. White","6":"4. College Grad","7":"2. Middle Atlantic","8":"2. Information","9":"2. >=Very Good","10":"2. No","11":"4.255273","12":"70.47602","_rn_":"86582"},{"1":"2003","2":"45","3":"1. Male","4":"2. Married","5":"1. White","6":"3. Some College","7":"2. Middle Atlantic","8":"1. Industrial","9":"1. <=Good","10":"1. Yes","11":"4.875061","12":"130.98218","_rn_":"161300"},{"1":"2003","2":"43","3":"1. Male","4":"2. Married","5":"3. Asian","6":"4. College Grad","7":"2. Middle Atlantic","8":"2. Information","9":"2. >=Very Good","10":"1. Yes","11":"5.041393","12":"154.68529","_rn_":"155159"},{"1":"2005","2":"50","3":"1. Male","4":"4. Divorced","5":"1. White","6":"2. HS Grad","7":"2. Middle Atlantic","8":"2. Information","9":"1. <=Good","10":"1. Yes","11":"4.318063","12":"75.04315","_rn_":"11443"},{"1":"2008","2":"54","3":"1. Male","4":"2. Married","5":"1. White","6":"4. College Grad","7":"2. Middle Atlantic","8":"2. Information","9":"2. >=Very Good","10":"1. Yes","11":"4.845098","12":"127.11574","_rn_":"376662"}],"options":{"columns":{"min":{},"max":[10],"total":[12]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
@@ -287,33 +291,44 @@ The following objects are masked from ‘package:base’:
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>We would like to be able to predict the persons wage based on the other variables. From charting the data (see the book) we can see that wage increases with age, up to about 60 year old, than drops. It also goes up slighlty by year. And it definitely varies by education level.</p>
+<p>We would like to be able to predict the persons wage based on the other variables. From charting the data we can see that wage increases with age, up to about 60 year old, than drops.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuV2FnZSAlPiUgXG4gIGdndmlzKH5hZ2UsIH53YWdlKSAlPiUgXG4gIGxheWVyX3BvaW50cyhcbiAgICBmaWxsIDo9IFwiZ3JheVwiXG4gICAgKSAlPiVcbiAgbGF5ZXJfc21vb3RocyhcbiAgICBzZSA9IFRSVUUsXG4gICAgZmlsbCA6PSBcImJsdWVcIlxuICAgIClcbmBgYCJ9 -->
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Wage %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggvis</span>(~age, ~wage) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">layer_points</span>(
+    fill :<span class="er">=</span><span class="st"> &quot;gray&quot;</span>
+    ) %&gt;%
+<span class="st">  </span><span class="kw">layer_smooths</span>(
+    <span class="dt">se =</span> <span class="ot">TRUE</span>,
+    fill :<span class="er">=</span><span class="st"> &quot;blue&quot;</span>
+    )</code></pre></div>
+<!-- rnb-source-end -->
 
 <!-- rnb-htmlwidget-begin eyJkZXBlbmRlbmNpZXMiOlt7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeSIsInNjcmlwdCI6ImpxdWVyeS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5In0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS4xMS4wIn0seyJhbGxfZmlsZXMiOnRydWUsImF0dGFjaG1lbnQiOltdLCJoZWFkIjpbXSwibWV0YSI6W10sIm5hbWUiOiJkZXRlY3QtcmVzaXplIiwic2NyaXB0IjoianF1ZXJ5LnJlc2l6ZS5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi9kZXRlY3QtcmVzaXplIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMC41LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeS11aSIsInNjcmlwdCI6ImpxdWVyeS11aS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5LXVpIn0sInN0eWxlc2hlZXQiOiJqcXVlcnktdWkubWluLmNzcyIsInZlcnNpb24iOiIxLjExLjQifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImQzIiwic2NyaXB0IjoiZDMubWluLmpzIiwic3JjIjp7ImZpbGUiOiIvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuMi9SZXNvdXJjZXMvbGlicmFyeS9nZ3Zpcy93d3cvbGliL2QzIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMy41LjIifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6InZlZ2EiLCJzY3JpcHQiOiJ2ZWdhLm1pbi5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi92ZWdhIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS40LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOiI8c2NyaXB0PnZhciBsb2Rhc2ggPSBfLm5vQ29uZmxpY3QoKTs8L3NjcmlwdD4iLCJtZXRhIjpbXSwibmFtZSI6ImxvZGFzaCIsInNjcmlwdCI6ImxvZGFzaC5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvbG9kYXNoIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMi4yLjEifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImdndmlzIiwic2NyaXB0IjoianMvZ2d2aXMuanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9nZ3ZpcyJ9LCJzdHlsZXNoZWV0IjoiY3NzL2dndmlzLmNzcyIsInZlcnNpb24iOiIwLjQuMiJ9XSwibWV0YWRhdGEiOnsiY2xhc3NlcyI6WyJzaGlueS50YWcubGlzdCIsImxpc3QiXSwic2l6aW5nUG9saWN5IjpbXX19 -->
 
-<div id="plot_880539166-container" class="ggvis-output-container">
-  <div id="plot_880539166" class="ggvis-output"></div>
+<div id="plot_121004458-container" class="ggvis-output-container">
+  <div id="plot_121004458" class="ggvis-output"></div>
   <div class="plot-gear-icon">
     <nav class="ggvis-control">
       <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
       <ul class="ggvis-dropdown">
         <li>
           Renderer: 
-          <a id="plot_880539166_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_880539166" data-renderer="svg">SVG</a>
+          <a id="plot_121004458_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_121004458" data-renderer="svg">SVG</a>
            | 
-          <a id="plot_880539166_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_880539166" data-renderer="canvas">Canvas</a>
+          <a id="plot_121004458_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_121004458" data-renderer="canvas">Canvas</a>
         </li>
         <li>
-          <a id="plot_880539166_download" class="ggvis-download" data-plot-id="plot_880539166">Download</a>
+          <a id="plot_121004458_download" class="ggvis-download" data-plot-id="plot_121004458">Download</a>
         </li>
       </ul>
     </nav>
   </div>
 </div>
 <script type="text/javascript">
-var plot_880539166_spec = {
+var plot_121004458_spec = {
   "data": [
     {
       "name": ".0",
@@ -434,7 +449,7 @@ var plot_880539166_spec = {
             "field": "data.resp_lwr_"
           },
           "fill": {
-            "value": "green"
+            "value": "blue"
           },
           "stroke": {
             "value": "transparent"
@@ -515,37 +530,51 @@ var plot_880539166_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_880539166").parseSpec(plot_880539166_spec);
+ggvis.getPlot("plot_121004458").parseSpec(plot_121004458_spec);
 </script>
 
 <!-- rnb-htmlwidget-end -->
 
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>There are other variable that show a trend in the wage data. It also goes up slighlty by year.</p>
+<!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuV2FnZSAlPiUgXG4gIGdndmlzKH55ZWFyLCB+d2FnZSkgJT4lIFxuICBsYXllcl9wb2ludHMoXG4gICAgZmlsbCA6PSBcImdyYXlcIlxuICAgICkgJT4lXG4gIGxheWVyX3Ntb290aHMoXG4gICAgc2UgPSBUUlVFLFxuICAgIGZpbGwgOj0gXCJibHVlXCJcbiAgICApXG5gYGAifQ== -->
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Wage %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggvis</span>(~year, ~wage) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">layer_points</span>(
+    fill :<span class="er">=</span><span class="st"> &quot;gray&quot;</span>
+    ) %&gt;%
+<span class="st">  </span><span class="kw">layer_smooths</span>(
+    <span class="dt">se =</span> <span class="ot">TRUE</span>,
+    fill :<span class="er">=</span><span class="st"> &quot;blue&quot;</span>
+    )</code></pre></div>
+<!-- rnb-source-end -->
 
 <!-- rnb-htmlwidget-begin eyJkZXBlbmRlbmNpZXMiOlt7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeSIsInNjcmlwdCI6ImpxdWVyeS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5In0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS4xMS4wIn0seyJhbGxfZmlsZXMiOnRydWUsImF0dGFjaG1lbnQiOltdLCJoZWFkIjpbXSwibWV0YSI6W10sIm5hbWUiOiJkZXRlY3QtcmVzaXplIiwic2NyaXB0IjoianF1ZXJ5LnJlc2l6ZS5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi9kZXRlY3QtcmVzaXplIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMC41LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeS11aSIsInNjcmlwdCI6ImpxdWVyeS11aS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5LXVpIn0sInN0eWxlc2hlZXQiOiJqcXVlcnktdWkubWluLmNzcyIsInZlcnNpb24iOiIxLjExLjQifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImQzIiwic2NyaXB0IjoiZDMubWluLmpzIiwic3JjIjp7ImZpbGUiOiIvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuMi9SZXNvdXJjZXMvbGlicmFyeS9nZ3Zpcy93d3cvbGliL2QzIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMy41LjIifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6InZlZ2EiLCJzY3JpcHQiOiJ2ZWdhLm1pbi5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi92ZWdhIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS40LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOiI8c2NyaXB0PnZhciBsb2Rhc2ggPSBfLm5vQ29uZmxpY3QoKTs8L3NjcmlwdD4iLCJtZXRhIjpbXSwibmFtZSI6ImxvZGFzaCIsInNjcmlwdCI6ImxvZGFzaC5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvbG9kYXNoIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMi4yLjEifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImdndmlzIiwic2NyaXB0IjoianMvZ2d2aXMuanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9nZ3ZpcyJ9LCJzdHlsZXNoZWV0IjoiY3NzL2dndmlzLmNzcyIsInZlcnNpb24iOiIwLjQuMiJ9XSwibWV0YWRhdGEiOnsiY2xhc3NlcyI6WyJzaGlueS50YWcubGlzdCIsImxpc3QiXSwic2l6aW5nUG9saWN5IjpbXX19 -->
 
-<div id="plot_445919412-container" class="ggvis-output-container">
-  <div id="plot_445919412" class="ggvis-output"></div>
+<div id="plot_284878676-container" class="ggvis-output-container">
+  <div id="plot_284878676" class="ggvis-output"></div>
   <div class="plot-gear-icon">
     <nav class="ggvis-control">
       <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
       <ul class="ggvis-dropdown">
         <li>
           Renderer: 
-          <a id="plot_445919412_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_445919412" data-renderer="svg">SVG</a>
+          <a id="plot_284878676_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_284878676" data-renderer="svg">SVG</a>
            | 
-          <a id="plot_445919412_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_445919412" data-renderer="canvas">Canvas</a>
+          <a id="plot_284878676_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_284878676" data-renderer="canvas">Canvas</a>
         </li>
         <li>
-          <a id="plot_445919412_download" class="ggvis-download" data-plot-id="plot_445919412">Download</a>
+          <a id="plot_284878676_download" class="ggvis-download" data-plot-id="plot_284878676">Download</a>
         </li>
       </ul>
     </nav>
   </div>
 </div>
 <script type="text/javascript">
-var plot_445919412_spec = {
+var plot_284878676_spec = {
   "data": [
     {
       "name": ".0",
@@ -650,9 +679,6 @@ var plot_445919412_spec = {
       "type": "area",
       "properties": {
         "update": {
-          "fill": {
-            "value": "#333333"
-          },
           "y2": {
             "scale": "y",
             "field": "data.resp_upr_"
@@ -667,6 +693,9 @@ var plot_445919412_spec = {
           "y": {
             "scale": "y",
             "field": "data.resp_lwr_"
+          },
+          "fill": {
+            "value": "blue"
           },
           "stroke": {
             "value": "transparent"
@@ -747,39 +776,47 @@ var plot_445919412_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_445919412").parseSpec(plot_445919412_spec);
+ggvis.getPlot("plot_284878676").parseSpec(plot_284878676_spec);
 </script>
 
 <!-- rnb-htmlwidget-end -->
 
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>And it definitely varies by education level.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuV2FnZSAlPiUgXG4gIGdndmlzKH5lZHVjYXRpb24sIH53YWdlKSAlPiUgXG4gIGxheWVyX2JveHBsb3RzKFxuICAgIGZpbGwgOj0gXCJsaWdodGdyZWVuXCJcbiAgKVxuYGBgIn0= -->
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Wage %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">ggvis</span>(~education, ~wage) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">layer_boxplots</span>(
+    fill :<span class="er">=</span><span class="st"> &quot;lightgreen&quot;</span>
+  )</code></pre></div>
+<!-- rnb-source-end -->
 
 <!-- rnb-htmlwidget-begin eyJkZXBlbmRlbmNpZXMiOlt7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeSIsInNjcmlwdCI6ImpxdWVyeS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5In0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS4xMS4wIn0seyJhbGxfZmlsZXMiOnRydWUsImF0dGFjaG1lbnQiOltdLCJoZWFkIjpbXSwibWV0YSI6W10sIm5hbWUiOiJkZXRlY3QtcmVzaXplIiwic2NyaXB0IjoianF1ZXJ5LnJlc2l6ZS5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi9kZXRlY3QtcmVzaXplIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMC41LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeS11aSIsInNjcmlwdCI6ImpxdWVyeS11aS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5LXVpIn0sInN0eWxlc2hlZXQiOiJqcXVlcnktdWkubWluLmNzcyIsInZlcnNpb24iOiIxLjExLjQifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImQzIiwic2NyaXB0IjoiZDMubWluLmpzIiwic3JjIjp7ImZpbGUiOiIvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuMi9SZXNvdXJjZXMvbGlicmFyeS9nZ3Zpcy93d3cvbGliL2QzIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMy41LjIifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6InZlZ2EiLCJzY3JpcHQiOiJ2ZWdhLm1pbi5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi92ZWdhIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS40LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOiI8c2NyaXB0PnZhciBsb2Rhc2ggPSBfLm5vQ29uZmxpY3QoKTs8L3NjcmlwdD4iLCJtZXRhIjpbXSwibmFtZSI6ImxvZGFzaCIsInNjcmlwdCI6ImxvZGFzaC5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvbG9kYXNoIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMi4yLjEifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImdndmlzIiwic2NyaXB0IjoianMvZ2d2aXMuanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9nZ3ZpcyJ9LCJzdHlsZXNoZWV0IjoiY3NzL2dndmlzLmNzcyIsInZlcnNpb24iOiIwLjQuMiJ9XSwibWV0YWRhdGEiOnsiY2xhc3NlcyI6WyJzaGlueS50YWcubGlzdCIsImxpc3QiXSwic2l6aW5nUG9saWN5IjpbXX19 -->
 
-<div id="plot_876852536-container" class="ggvis-output-container">
-  <div id="plot_876852536" class="ggvis-output"></div>
+<div id="plot_586243883-container" class="ggvis-output-container">
+  <div id="plot_586243883" class="ggvis-output"></div>
   <div class="plot-gear-icon">
     <nav class="ggvis-control">
       <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
       <ul class="ggvis-dropdown">
         <li>
           Renderer: 
-          <a id="plot_876852536_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_876852536" data-renderer="svg">SVG</a>
+          <a id="plot_586243883_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_586243883" data-renderer="svg">SVG</a>
            | 
-          <a id="plot_876852536_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_876852536" data-renderer="canvas">Canvas</a>
+          <a id="plot_586243883_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_586243883" data-renderer="canvas">Canvas</a>
         </li>
         <li>
-          <a id="plot_876852536_download" class="ggvis-download" data-plot-id="plot_876852536">Download</a>
+          <a id="plot_586243883_download" class="ggvis-download" data-plot-id="plot_586243883">Download</a>
         </li>
       </ul>
     </nav>
   </div>
 </div>
 <script type="text/javascript">
-var plot_876852536_spec = {
+var plot_586243883_spec = {
   "data": [
     {
       "name": ".0/group_by1/boxplot2_flat",
@@ -1085,7 +1122,7 @@ var plot_876852536_spec = {
   },
   "handlers": null
 };
-ggvis.getPlot("plot_876852536").parseSpec(plot_876852536_spec);
+ggvis.getPlot("plot_586243883").parseSpec(plot_586243883_spec);
 </script>
 
 <!-- rnb-htmlwidget-end -->
@@ -1094,21 +1131,428 @@ ggvis.getPlot("plot_876852536").parseSpec(plot_876852536_spec);
 <!-- rnb-text-begin -->
 <p>Using just one of these variables to predict a persons wage will not be that accurate. Using all of them will probably be more accurate.</p>
 <p>We can use linear regression to predict a person wage from these other variables. This is supervised learning because it has clear inputs and outputs. Its also considered a regression problem because it involves prediciting a <strong>continuous</strong> or <strong>quantitative</strong> output value. We will learn a lot more about this in <strong>Chapter 3</strong>.</p>
-<p>While using strait lines to predict was how regression techniques started, we have more computing power today and can do better than just using strait lines. Ideally, we will take into account that wage and age have a non-linear relationship. This is discussed more in ** Chapter 7**</p>
+<p>Ideally, when we actually try to figure this out, will take into account that wage and age have a non-linear relationship. This is discussed more in <strong>Chapter 7</strong></p>
 </div>
 <div id="stock-market-data" class="section level2">
 <h2>Stock Market Data</h2>
+<p>With the wage data set we wanted to predict a continuous variable. With the stock marked data we want to predict a <strong>categorical</strong> variable. This is a non-numerical, like… up or down. : ) Instead of quanititative, its a <strong>qualitative</strong> outut. We will examine this more in <strong>Chapter 4</strong> This is considered a <strong>classification</strong> problem. In the case of the stock market, this would be a very useful thing to get right!</p>
+<p>Lets take a quick look and see if we can strike a jackpot.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibmNvbCI6OSwibnJvdyI6Nn0sInJkZiI6Ikg0c0lBQUFBQUFBQUF3dHlpVERpaXVCaVlHQmdZbUJtWW1KZ1lnWXlXWmlBQkNNREN3TW5pSzVnWUdBV0JqSkFIRDRnWm5PWTc4SUFBc1RTTUgzMk41SjhMMzFjK2NmKzNRYUZJN09YUHJiLzBDeVVONzAzWVAvajkzTTM2ZktGMlQ5ZStqajQrN21iOXFlZHB6YXlxZHlGNmR0L1luTEpucXk2WDhUcWgrazd3UEwzOHpiWGhhZUoxUSszNzhORDkzVWlWUStKMVE4UEZ4RXUyNExGMTdtSTFROFBsOC84RTZidG5uSEMvc3Urc2hOYkxDUHN2MDF4SzI2OGZzZitTMWJkejl0S0YrMC9lL1dJK3N5SXQvODY5ZVhERFowTDRQcUlERWY3YjY0TFR4MW9GZ0xHSXk5SUh6aXlJWmdSaWMyRUZ2RnNPYWxscVRuRlFKWUFXQllpeXVLU1g1NEhaVE9GRnFEcFlVM09TU3lHYVlFYmxKYVlYSkpmQkdUOVExZWVsNWliQ2xQT0NiTWhNald4Q01iMlNVdzNSR0liSWJHTmtkZ21TR3hUbUxWaCtUbWx1YWt3cTBMeVV4SXJvUnhPbDh5aTFPU1N6UHc4TkFkeEZ1V1g2OEVjQlFvc3BnWklBbWFES0dUK2orWTNycFRFa2tTOXRDS2dGaXorWTg4dkFGa0NOSXdKbElPNDBEUXpoaEFVS0NLa2dyODBEK1RlRk4za2pOSzhiRjBUZFBWdTJBUzRvRkhQQ1BVbEl6Ulp3TmljRUgrd3dIekxCWS9leE9RTVdJaXlwQ1puNU1QQ09qVXZQVE1QSVZPV21BUFRrcE9ZbEFyanNBTUR0amd4SGFhT3ZUeXhLQzh6THgzSzVRTUdQampzOVFxS012TktZQ0VNRkMzV0s4a3ZnUnZKbFp5ZkF4TUJoem5EUHdCbC9wY0h4d1FBQUE9PSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Year"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Lag1"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Lag2"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Lag3"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Lag4"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Lag5"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Volume"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Today"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Direction"],"name":[9],"type":["fctr"],"align":["left"]}],"data":[{"1":"2001","2":"0.381","3":"-0.192","4":"-2.624","5":"-1.055","6":"5.010","7":"1.1913","8":"0.959","9":"Up","_rn_":"1"},{"1":"2001","2":"0.959","3":"0.381","4":"-0.192","5":"-2.624","6":"-1.055","7":"1.2965","8":"1.032","9":"Up","_rn_":"2"},{"1":"2001","2":"1.032","3":"0.959","4":"0.381","5":"-0.192","6":"-2.624","7":"1.4112","8":"-0.623","9":"Down","_rn_":"3"},{"1":"2001","2":"-0.623","3":"1.032","4":"0.959","5":"0.381","6":"-0.192","7":"1.2760","8":"0.614","9":"Up","_rn_":"4"},{"1":"2001","2":"0.614","3":"-0.623","4":"1.032","5":"0.959","6":"0.381","7":"1.2057","8":"0.213","9":"Up","_rn_":"5"},{"1":"2001","2":"0.213","3":"0.614","4":"-0.623","5":"1.032","6":"0.959","7":"1.3491","8":"1.392","9":"Up","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[9]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>So we can see how much the market went up on a given day and what the changes were on the previous 5 days. Maybe there is a magic trend!</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+
+<!-- rnb-htmlwidget-begin eyJkZXBlbmRlbmNpZXMiOlt7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeSIsInNjcmlwdCI6ImpxdWVyeS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5In0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS4xMS4wIn0seyJhbGxfZmlsZXMiOnRydWUsImF0dGFjaG1lbnQiOltdLCJoZWFkIjpbXSwibWV0YSI6W10sIm5hbWUiOiJkZXRlY3QtcmVzaXplIiwic2NyaXB0IjoianF1ZXJ5LnJlc2l6ZS5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi9kZXRlY3QtcmVzaXplIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMC41LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImpxdWVyeS11aSIsInNjcmlwdCI6ImpxdWVyeS11aS5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvanF1ZXJ5LXVpIn0sInN0eWxlc2hlZXQiOiJqcXVlcnktdWkubWluLmNzcyIsInZlcnNpb24iOiIxLjExLjQifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImQzIiwic2NyaXB0IjoiZDMubWluLmpzIiwic3JjIjp7ImZpbGUiOiIvTGlicmFyeS9GcmFtZXdvcmtzL1IuZnJhbWV3b3JrL1ZlcnNpb25zLzMuMi9SZXNvdXJjZXMvbGlicmFyeS9nZ3Zpcy93d3cvbGliL2QzIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMy41LjIifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6InZlZ2EiLCJzY3JpcHQiOiJ2ZWdhLm1pbi5qcyIsInNyYyI6eyJmaWxlIjoiL0xpYnJhcnkvRnJhbWV3b3Jrcy9SLmZyYW1ld29yay9WZXJzaW9ucy8zLjIvUmVzb3VyY2VzL2xpYnJhcnkvZ2d2aXMvd3d3L2xpYi92ZWdhIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMS40LjMifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOiI8c2NyaXB0PnZhciBsb2Rhc2ggPSBfLm5vQ29uZmxpY3QoKTs8L3NjcmlwdD4iLCJtZXRhIjpbXSwibmFtZSI6ImxvZGFzaCIsInNjcmlwdCI6ImxvZGFzaC5taW4uanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9saWIvbG9kYXNoIn0sInN0eWxlc2hlZXQiOltdLCJ2ZXJzaW9uIjoiMi4yLjEifSx7ImFsbF9maWxlcyI6dHJ1ZSwiYXR0YWNobWVudCI6W10sImhlYWQiOltdLCJtZXRhIjpbXSwibmFtZSI6ImdndmlzIiwic2NyaXB0IjoianMvZ2d2aXMuanMiLCJzcmMiOnsiZmlsZSI6Ii9MaWJyYXJ5L0ZyYW1ld29ya3MvUi5mcmFtZXdvcmsvVmVyc2lvbnMvMy4yL1Jlc291cmNlcy9saWJyYXJ5L2dndmlzL3d3dy9nZ3ZpcyJ9LCJzdHlsZXNoZWV0IjoiY3NzL2dndmlzLmNzcyIsInZlcnNpb24iOiIwLjQuMiJ9XSwibWV0YWRhdGEiOnsiY2xhc3NlcyI6WyJzaGlueS50YWcubGlzdCIsImxpc3QiXSwic2l6aW5nUG9saWN5IjpbXX19 -->
+
+<div id="plot_754766917-container" class="ggvis-output-container">
+  <div id="plot_754766917" class="ggvis-output"></div>
+  <div class="plot-gear-icon">
+    <nav class="ggvis-control">
+      <a class="ggvis-dropdown-toggle" title="Controls" onclick="return false;"></a>
+      <ul class="ggvis-dropdown">
+        <li>
+          Renderer: 
+          <a id="plot_754766917_renderer_svg" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_754766917" data-renderer="svg">SVG</a>
+           | 
+          <a id="plot_754766917_renderer_canvas" class="ggvis-renderer-button" onclick="return false;" data-plot-id="plot_754766917" data-renderer="canvas">Canvas</a>
+        </li>
+        <li>
+          <a id="plot_754766917_download" class="ggvis-download" data-plot-id="plot_754766917">Download</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<script type="text/javascript">
+var plot_754766917_spec = {
+  "data": [
+    {
+      "name": ".0/group_by1/boxplot2_flat",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "min_": "number",
+          "max_": "number",
+          "lower_": "number",
+          "upper_": "number",
+          "median_": "number"
+        }
+      },
+      "values": "\"three_days_prev\",\"min_\",\"max_\",\"lower_\",\"upper_\",\"median_\"\n\"Down\",-2.492,2.463,-0.6365,0.6205,0.027\n\"Up\",-2.443,2.369,-0.639,0.582,0.046"
+    },
+    {
+      "name": ".0/group_by1/boxplot2",
+      "source": ".0/group_by1/boxplot2_flat",
+      "transform": [
+        {
+          "type": "treefacet",
+          "keys": [
+            "data.three_days_prev"
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".0/group_by1/boxplot2/boxplot_outliers3_flat",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "value_": "number"
+        }
+      },
+      "values": "\"value_\",\"three_days_prev\"\n-2.584,\"Down\"\n2.557,\"Down\"\n-3.439,\"Down\"\n4.368,\"Down\"\n2.845,\"Down\"\n-4.922,\"Down\"\n-3.106,\"Down\"\n3.898,\"Down\"\n3.75,\"Down\"\n3.673,\"Down\"\n-2.702,\"Down\"\n-3.835,\"Down\"\n-2.702,\"Down\"\n5.733,\"Down\"\n2.992,\"Down\"\n3.272,\"Down\"\n-4.154,\"Down\"\n-3.226,\"Down\"\n-2.729,\"Down\"\n3.497,\"Down\"\n2.799,\"Down\"\n3.32,\"Down\"\n-2.923,\"Down\"\n3.446,\"Down\"\n2.612,\"Down\"\n-2.476,\"Up\"\n-4.318,\"Up\"\n2.707,\"Up\"\n3.889,\"Up\"\n-2.861,\"Up\"\n-2.474,\"Up\"\n2.869,\"Up\"\n-2.472,\"Up\"\n-3.396,\"Up\"\n-3.291,\"Up\"\n5.408,\"Up\"\n-2.957,\"Up\"\n-3.43,\"Up\"\n4.005,\"Up\"\n-2.478,\"Up\"\n-3.006,\"Up\"\n2.486,\"Up\"\n4.002,\"Up\"\n3.906,\"Up\"\n4.734,\"Up\"\n-2.583,\"Up\"\n3.543,\"Up\"\n-3.523,\"Up\""
+    },
+    {
+      "name": ".0/group_by1/boxplot2/boxplot_outliers3",
+      "source": ".0/group_by1/boxplot2/boxplot_outliers3_flat",
+      "transform": [
+        {
+          "type": "treefacet",
+          "keys": [
+            "data.three_days_prev"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "scale/fill",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"Down\"\n\"Up\""
+    },
+    {
+      "name": "scale/x",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"Down\"\n\"Up\""
+    },
+    {
+      "name": "scale/xcenter",
+      "format": {
+        "type": "csv",
+        "parse": {}
+      },
+      "values": "\"domain\"\n\"Down\"\n\"Up\""
+    },
+    {
+      "name": "scale/y",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "domain": "number"
+        }
+      },
+      "values": "\"domain\"\n-5.45475\n6.26575"
+    }
+  ],
+  "scales": [
+    {
+      "name": "fill",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/fill",
+        "field": "data.domain"
+      },
+      "points": true,
+      "sort": false,
+      "range": "category10"
+    },
+    {
+      "padding": 0.1,
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/x",
+        "field": "data.domain"
+      },
+      "name": "x",
+      "points": false,
+      "sort": false,
+      "range": "width"
+    },
+    {
+      "points": true,
+      "padding": 1.1,
+      "name": "xcenter",
+      "type": "ordinal",
+      "domain": {
+        "data": "scale/xcenter",
+        "field": "data.domain"
+      },
+      "sort": false,
+      "range": "width"
+    },
+    {
+      "name": "y",
+      "domain": {
+        "data": "scale/y",
+        "field": "data.domain"
+      },
+      "zero": false,
+      "nice": false,
+      "clamp": false,
+      "range": "height"
+    }
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/boxplot2"
+      },
+      "marks": [
+        {
+          "type": "rect",
+          "properties": {
+            "update": {
+              "stroke": {
+                "value": "#000000"
+              },
+              "fill": {
+                "scale": "fill",
+                "field": "data.three_days_prev"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.min_"
+              },
+              "y2": {
+                "scale": "y",
+                "field": "data.max_"
+              },
+              "x": {
+                "scale": "xcenter",
+                "field": "data.three_days_prev"
+              },
+              "width": {
+                "value": 0.5
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/boxplot2"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/boxplot2"
+      },
+      "marks": [
+        {
+          "type": "rect",
+          "properties": {
+            "update": {
+              "stroke": {
+                "value": "#000000"
+              },
+              "fill": {
+                "scale": "fill",
+                "field": "data.three_days_prev"
+              },
+              "x": {
+                "scale": "x",
+                "field": "data.three_days_prev"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.lower_"
+              },
+              "y2": {
+                "scale": "y",
+                "field": "data.upper_"
+              },
+              "width": {
+                "scale": "x",
+                "band": true
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/boxplot2"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/boxplot2"
+      },
+      "marks": [
+        {
+          "type": "rect",
+          "properties": {
+            "update": {
+              "stroke": {
+                "value": "#000000"
+              },
+              "fill": {
+                "scale": "fill",
+                "field": "data.three_days_prev"
+              },
+              "x": {
+                "scale": "x",
+                "field": "data.three_days_prev"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.median_"
+              },
+              "width": {
+                "scale": "x",
+                "band": true
+              },
+              "height": {
+                "value": 1
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/boxplot2"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "from": {
+        "data": ".0/group_by1/boxplot2/boxplot_outliers3"
+      },
+      "marks": [
+        {
+          "type": "symbol",
+          "properties": {
+            "update": {
+              "size": {
+                "value": 50
+              },
+              "fill": {
+                "value": "black"
+              },
+              "y": {
+                "scale": "y",
+                "field": "data.value_"
+              },
+              "x": {
+                "scale": "xcenter",
+                "field": "data.three_days_prev"
+              }
+            },
+            "ggvis": {
+              "data": {
+                "value": ".0/group_by1/boxplot2/boxplot_outliers3"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "legends": [
+    {
+      "orient": "right",
+      "fill": "fill",
+      "title": "three_days_prev"
+    }
+  ],
+  "axes": [
+    {
+      "type": "x",
+      "scale": "x",
+      "orient": "bottom",
+      "layer": "back",
+      "grid": true,
+      "title": "three_days_prev"
+    },
+    {
+      "type": "y",
+      "scale": "y",
+      "orient": "left",
+      "layer": "back",
+      "grid": true,
+      "title": "Today"
+    }
+  ],
+  "padding": null,
+  "ggvis_opts": {
+    "width": 600,
+    "height": 400,
+    "keep_aspect": false,
+    "resizable": true,
+    "padding": {},
+    "duration": 250,
+    "renderer": "svg",
+    "hover_duration": 0
+  },
+  "handlers": null
+};
+ggvis.getPlot("plot_754766917").parseSpec(plot_754766917_spec);
+</script>
+
+<!-- rnb-htmlwidget-end -->
+
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Pretty much no. Just from looking at the box plots its not clear that the market will go up or down today based on what it did in any of the previous 3 days. Alright, we’ll have to learn more in Chapter 4 I guess when we examine different statistical methods for predicting the change.</p>
 </div>
 <div id="gene-expression-data" class="section level2">
 <h2>Gene Expression Data</h2>
+<p>The last two datasets both involved input and output variables. With the Gene dataset we have no corresponding output that we are trying to predict. We just have the data and want to understand how the data points relate to each other. Like, maybe you have demographic data of your user apps user base and want to see how some of the users are similar to others. This is known as a <strong>clustering</strong> problem. We’ll talk more about this in <strong>Chapter 10</strong>. The visualizations of this type of data are ofter more advanced. I can’t do it yet but hopefully I learn how after reading the later chapters.</p>
 </div>
 <div id="a-brief-history-of-statistical-learning" class="section level2">
 <h2>A Brief History of Statistical Learning</h2>
+<p>Least squares was the fist implementation of what we now call linear regression. Some dudes created it in the early nineteenth centry. NBD. Logistic regression or prediciting a categorical variable, was developed in the 1940s. By the 1970 there were many methods for learning from data, but they were mostly linear methods. Fitting non-linear relationships was still too computationally expensive. Once computing power increased, in the 1980s, clasiification and regression trees were introducted. Now we have machine learning and statistical learning is is own subfield of statistics.</p>
+</div>
+<div id="this-book" class="section level2">
+<h2>This Book</h2>
+<p>Its popular because of its topical approach. Also its understandable by a wide audience. At one time only statistian experts could apply statistical approaches to datasets, but with the availability of many software tools now its possible for people from many backgrounds to apply statistical approaches to learn from datasets in many fields. Like me I guess. I’m hoping to do something useful with it after studying it for about a month.</p>
+<p>The authors say… “It is important for this diverse group to be able to understand the models, intuitions, and strengths and weaknesses of the various approaches. But for this audience, many of the technical details behind statistical learning methods, such as optimization algorithms and theoretical properties, are not of primary interest.” Cha Brah. You are right about that.</p>
+<p>There are some premises that the authors believe:</p>
+<ul>
+<li>Many statistical learning methods are relevant and useful in a wide range of academic and non-academic disciplines, beyond just the sta- tistical sciences.
+<ul>
+<li>Linear regression is the original gangster, the hammer. But scrwdrivers and saws, and other tools are useful too and widely available today. But learning every possible tool and variation is not necessary to build a table. This book focuses on the main tools.</li>
+</ul></li>
+<li>Statistical learning should not be viewed as a series of black boxes.
+<ul>
+<li>You don’t need to know how each cog in the the box works to know it is the right box to use for the job. Like a drill or a tooth brush.</li>
+</ul></li>
+<li>While it is important to know what job is performed by each cog, it is not necessary to have the skills to construct the machine inside the box! - In other words, you do not need a PhD in toothbrushes to know how to use one. This book avoids matrix algebra. Yay!</li>
+<li>We presume that the reader is interested in applying statistical learning methods to real-world problems.
+<ul>
+<li>I mean, some people might just want to learn this stuff for fun, but I just want to do it so I can solve business problems and make money doing it. I guess thats the real world. R can handle every method in this book and its free, so its used to solve them. Cool. Also, this is the language of choice for acedemic statisticians and new approaches are always available here first.</li>
+</ul></li>
+</ul>
+</div>
+<div id="who-should-read-this-book" class="section level2">
+<h2>Who should read this book?</h2>
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ2hhcHRlciAxIE5vdGVzIgphdXRob3I6ICJXaWxsaWFtIFN1cmxlcyIKZGF0ZTogIkZlYiAwOCwgMjAxNyIKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6IGRlZmF1bHQKICBodG1sX25vdGVib29rOgogICAgaGlnaGxpZ2h0OiB0YW5nbwogICAgc2VsZl9jb250YWluZWQ6IHllcwogICAgdGhlbWU6IGZsYXRseQotLS0KCmBgYHtyIHNldC1vcHRpb25zLCBldmFsPVQsIGVjaG89RiwgY2FjaGU9Rn0KCmtuaXRyOjpvcHRzX2NodW5rJHNldChmaWcud2lkdGg9NiwgZmlnLmhlaWdodD00KQoKYGBgCgpgYGB7ciwgZXZhbD1ULCBlY2hvPVQsIGNhY2hlPUYsIG1lc3NhZ2U9Riwgd2FybmluZz1GfQoKbGlicmFyeShJU0xSKQpsaWJyYXJ5KGRwbHlyKQpsaWJyYXJ5KGdndmlzKQoKYGBgCgojIEFuIE92ZXJ2aWV3IG9mIFN0YXRpc3RpY2FsIExlYXJuaW5nCgogIC0gKipTdGF0aXN0aWNhbCBMZWFybmluZyoqIHJlZmVycyB0byBhIHZhc3Qgc2V0IG9mIHRvb2xzIGZvciAqKnVuZGVyc3RhbmRpbmcgZGF0YSoqLgogIC0gVGhlc2UgdG9vbHMgYXJlIGNsYXNzaWZpZWQgYXMgc3VwZXJ2aXNlZCBvciB1bnN1cGVydmlzZWQuIAogICAgLSBzdXBlcnZpc2VkIGludm9sdmVzIGJ1aWxkaW5nIGEgc3RhdGl0aWNhbCBtb2RlbCBmb3IgcHJlZGljdGluZywgb3IgZXN0aW1hdGluZywgYW4gKipvdXRwdXQqKiBiYXNlZCBvbiBvbmUgb3IgbW9yZSAqKmlucHV0cyoqLgogICAgLSB1bnN1cGVydmlzZWQgaW52b2x2ZXMgaW5wdXRzIGJ1dCBubyBzdXBlcnZpc2luZyBvdXRwdXQsIHlldCB3ZSBzdGlsbCBsZWFybiByZWxhdGlvbnNoaXBzIGFuZCBzdHJ1Y3R1cmUgZnJvbSB0aGUgZGF0YS4KCkEgYnJpZWYgbG9vayBhdCAzIGRpZmZlcmVudCB0eXBlcyBvZiBkYXRhc2V0IHdpbGwgaWxsdXN0cmF0ZSBzb21lIG9mIHRoZSBkaWZmZXJlbnQgbWV0aG9kcyBhbmQgYXBwbGljYXRpb25zIG9mIHN0YXRpc3RpY2FsIGxlYXJuaW5nLgoKIyMgV2FnZSBEYXRhCgpUaGUgd2FnZSBkYXRhc2V0IGhhcyB3YWdlIGRhdGEgYW5kIHNvbWUgb3RoZXIgaW5mb3JtYXRpb24uIAoKYGBge3IsIGV2YWw9VCwgZWNobz1ULCBjYWNoZT1ULCBtZXNzYWdlPUYsIHdhcm5pbmc9Rn0KCnN0cihXYWdlKQpoZWFkKFdhZ2UpCiAgCmBgYAoKV2Ugd291bGQgbGlrZSB0byBiZSBhYmxlIHRvIHByZWRpY3QgdGhlIHBlcnNvbnMgd2FnZSBiYXNlZCBvbiB0aGUgb3RoZXIgdmFyaWFibGVzLgpGcm9tIGNoYXJ0aW5nIHRoZSBkYXRhIChzZWUgdGhlIGJvb2spIHdlIGNhbiBzZWUgdGhhdCB3YWdlIGluY3JlYXNlcyB3aXRoIGFnZSwgdXAgdG8gYWJvdXQgNjAgeWVhciBvbGQsIHRoYW4gZHJvcHMuIApJdCBhbHNvIGdvZXMgdXAgc2xpZ2hsdHkgYnkgeWVhci4gCkFuZCBpdCBkZWZpbml0ZWx5IHZhcmllcyBieSBlZHVjYXRpb24gbGV2ZWwuIAoKYGBge3IsIGV2YWw9VCwgZWNobz1ULCBjYWNoZT1ULCBtZXNzYWdlPUYsIHdhcm5pbmc9Rn0KCldhZ2UgJT4lIAogIGdndmlzKH5hZ2UsIH53YWdlKSAlPiUgCiAgbGF5ZXJfcG9pbnRzKAogICAgZmlsbCA6PSAiZ3JheSIKICAgICkgJT4lCiAgbGF5ZXJfc21vb3RocygKICAgIHNlID0gVFJVRSwKICAgIGZpbGwgOj0gImdyZWVuIgogICAgKQoKYGBgCmBgYHtyLCBldmFsPVQsIGVjaG89VCwgY2FjaGU9VCwgbWVzc2FnZT1GLCB3YXJuaW5nPUZ9CgpXYWdlICU+JSAKICBnZ3Zpcyh+eWVhciwgfndhZ2UpICU+JSAKICBsYXllcl9wb2ludHMoCiAgICBmaWxsIDo9ICJncmF5IgogICAgKSAlPiUKICBsYXllcl9zbW9vdGhzKAogICAgc2UgPSBUUlVFLAogICAgZmlsbCA6PSAiZ3JlZW4iCiAgICApCgpgYGAKCmBgYHtyLCBldmFsPVQsIGVjaG89VCwgY2FjaGU9VCwgbWVzc2FnZT1GLCB3YXJuaW5nPUZ9CgpXYWdlICU+JSAKICBnZ3Zpcyh+ZWR1Y2F0aW9uLCB+d2FnZSkgJT4lIAogIGxheWVyX2JveHBsb3RzKAogICAgZmlsbCA6PSAibGlnaHRncmVlbiIKICApCgpgYGAKClVzaW5nIGp1c3Qgb25lIG9mIHRoZXNlIHZhcmlhYmxlcyB0byBwcmVkaWN0IGEgcGVyc29ucyB3YWdlIHdpbGwgbm90IGJlIHRoYXQgYWNjdXJhdGUuClVzaW5nIGFsbCBvZiB0aGVtIHdpbGwgcHJvYmFibHkgYmUgbW9yZSBhY2N1cmF0ZS4gCgpXZSBjYW4gdXNlIGxpbmVhciByZWdyZXNzaW9uIHRvIHByZWRpY3QgYSBwZXJzb24gd2FnZSBmcm9tIHRoZXNlIG90aGVyIHZhcmlhYmxlcy4gClRoaXMgaXMgc3VwZXJ2aXNlZCBsZWFybmluZyBiZWNhdXNlIGl0IGhhcyBjbGVhciBpbnB1dHMgYW5kIG91dHB1dHMuIApJdHMgYWxzbyBjb25zaWRlcmVkIGEgcmVncmVzc2lvbiBwcm9ibGVtIGJlY2F1c2UgaXQgaW52b2x2ZXMgcHJlZGljaXRpbmcgYSAqKmNvbnRpbnVvdXMqKiBvciAqKnF1YW50aXRhdGl2ZSoqIG91dHB1dCB2YWx1ZS4gCldlIHdpbGwgbGVhcm4gYSBsb3QgbW9yZSBhYm91dCB0aGlzIGluICoqQ2hhcHRlciAzKiouCgpXaGlsZSB1c2luZyBzdHJhaXQgbGluZXMgdG8gcHJlZGljdCB3YXMgaG93IHJlZ3Jlc3Npb24gdGVjaG5pcXVlcyBzdGFydGVkLCB3ZSBoYXZlIG1vcmUgY29tcHV0aW5nIHBvd2VyIHRvZGF5IGFuZCBjYW4gZG8gYmV0dGVyIHRoYW4ganVzdCB1c2luZyBzdHJhaXQgbGluZXMuIElkZWFsbHksIHdlIHdpbGwgdGFrZSBpbnRvIGFjY291bnQgdGhhdCB3YWdlIGFuZCBhZ2UgaGF2ZSBhIG5vbi1saW5lYXIgcmVsYXRpb25zaGlwLiBUaGlzIGlzIGRpc2N1c3NlZCBtb3JlIGluICoqIENoYXB0ZXIgNyoqCgojIyBTdG9jayBNYXJrZXQgRGF0YQoKIyMgR2VuZSBFeHByZXNzaW9uIERhdGEKCiMjIEEgQnJpZWYgSGlzdG9yeSBvZiBTdGF0aXN0aWNhbCBMZWFybmluZw==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQ2hhcHRlciAxIE5vdGVzIgphdXRob3I6ICJXaWxsaWFtIFN1cmxlcyIKZGF0ZTogIkZlYiAwOCwgMjAxNyIKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6IGRlZmF1bHQKICBodG1sX25vdGVib29rOgogICAgaGlnaGxpZ2h0OiB0YW5nbwogICAgc2VsZl9jb250YWluZWQ6IHllcwogICAgdGhlbWU6IGZsYXRseQotLS0KCmBgYHtyIHNldC1vcHRpb25zLCBldmFsPVQsIGVjaG89RiwgY2FjaGU9Rn0KCmtuaXRyOjpvcHRzX2NodW5rJHNldChmaWcud2lkdGg9NiwgZmlnLmhlaWdodD00KQoKYGBgCgpgYGB7ciwgZXZhbD1ULCBlY2hvPVQsIGNhY2hlPUYsIG1lc3NhZ2U9Riwgd2FybmluZz1GfQoKbGlicmFyeShJU0xSKQpsaWJyYXJ5KGRwbHlyKQpsaWJyYXJ5KGdndmlzKQoKYGBgCgojIEFuIE92ZXJ2aWV3IG9mIFN0YXRpc3RpY2FsIExlYXJuaW5nCgogIC0gKipTdGF0aXN0aWNhbCBMZWFybmluZyoqIHJlZmVycyB0byBhIHZhc3Qgc2V0IG9mIHRvb2xzIGZvciAqKnVuZGVyc3RhbmRpbmcgZGF0YSoqLgogIC0gVGhlc2UgdG9vbHMgYXJlIGNsYXNzaWZpZWQgYXMgc3VwZXJ2aXNlZCBvciB1bnN1cGVydmlzZWQuIAogICAgLSBzdXBlcnZpc2VkIGludm9sdmVzIGJ1aWxkaW5nIGEgc3RhdGl0aWNhbCBtb2RlbCBmb3IgcHJlZGljdGluZywgb3IgZXN0aW1hdGluZywgYW4gKipvdXRwdXQqKiBiYXNlZCBvbiBvbmUgb3IgbW9yZSAqKmlucHV0cyoqLgogICAgLSB1bnN1cGVydmlzZWQgaW52b2x2ZXMgaW5wdXRzIGJ1dCBubyBzdXBlcnZpc2luZyBvdXRwdXQsIHlldCB3ZSBzdGlsbCBsZWFybiByZWxhdGlvbnNoaXBzIGFuZCBzdHJ1Y3R1cmUgZnJvbSB0aGUgZGF0YS4KCkEgYnJpZWYgbG9vayBhdCAzIGRpZmZlcmVudCB0eXBlcyBvZiBkYXRhc2V0IHdpbGwgaWxsdXN0cmF0ZSBzb21lIG9mIHRoZSBkaWZmZXJlbnQgbWV0aG9kcyBhbmQgYXBwbGljYXRpb25zIG9mIHN0YXRpc3RpY2FsIGxlYXJuaW5nLgoKIyMgV2FnZSBEYXRhCgpUaGUgd2FnZSBkYXRhc2V0IGhhcyB5ZWFybHkgd2FnZSBkYXRhIGZvciBpbmRpdmlkdWFscywgYXMgd2VsbCBhcyBtYW55IG90aGVyIHZhcmlhYmxlcy4gClRha2UgYSBsb29rLi4uCgpgYGB7ciwgZXZhbD1ULCBlY2hvPVQsIGNhY2hlPVQsIG1lc3NhZ2U9Riwgd2FybmluZz1GfQoKc3RyKFdhZ2UpCmhlYWQoV2FnZSkKICAKYGBgCgpXZSB3b3VsZCBsaWtlIHRvIGJlIGFibGUgdG8gcHJlZGljdCB0aGUgcGVyc29ucyB3YWdlIGJhc2VkIG9uIHRoZSBvdGhlciB2YXJpYWJsZXMuCkZyb20gY2hhcnRpbmcgdGhlIGRhdGEgd2UgY2FuIHNlZSB0aGF0IHdhZ2UgaW5jcmVhc2VzIHdpdGggYWdlLCB1cCB0byBhYm91dCA2MCB5ZWFyIG9sZCwgdGhhbiBkcm9wcy4gCgpgYGB7ciwgZXZhbD1ULCBlY2hvPVQsIGNhY2hlPVQsIG1lc3NhZ2U9Riwgd2FybmluZz1GfQoKV2FnZSAlPiUgCiAgZ2d2aXMofmFnZSwgfndhZ2UpICU+JSAKICBsYXllcl9wb2ludHMoCiAgICBmaWxsIDo9ICJncmF5IgogICAgKSAlPiUKICBsYXllcl9zbW9vdGhzKAogICAgc2UgPSBUUlVFLAogICAgZmlsbCA6PSAiYmx1ZSIKICAgICkKCmBgYAoKVGhlcmUgYXJlIG90aGVyIHZhcmlhYmxlIHRoYXQgc2hvdyBhIHRyZW5kIGluIHRoZSB3YWdlIGRhdGEuIApJdCBhbHNvIGdvZXMgdXAgc2xpZ2hsdHkgYnkgeWVhci4gCgpgYGB7ciwgZXZhbD1ULCBlY2hvPVQsIGNhY2hlPVQsIG1lc3NhZ2U9Riwgd2FybmluZz1GfQoKV2FnZSAlPiUgCiAgZ2d2aXMofnllYXIsIH53YWdlKSAlPiUgCiAgbGF5ZXJfcG9pbnRzKAogICAgZmlsbCA6PSAiZ3JheSIKICAgICkgJT4lCiAgbGF5ZXJfc21vb3RocygKICAgIHNlID0gVFJVRSwKICAgIGZpbGwgOj0gImJsdWUiCiAgICApCgpgYGAKCkFuZCBpdCBkZWZpbml0ZWx5IHZhcmllcyBieSBlZHVjYXRpb24gbGV2ZWwuCgpgYGB7ciwgZXZhbD1ULCBlY2hvPVQsIGNhY2hlPVQsIG1lc3NhZ2U9Riwgd2FybmluZz1GfQoKV2FnZSAlPiUgCiAgZ2d2aXMofmVkdWNhdGlvbiwgfndhZ2UpICU+JSAKICBsYXllcl9ib3hwbG90cygKICAgIGZpbGwgOj0gImxpZ2h0Z3JlZW4iCiAgKQoKYGBgCgpVc2luZyBqdXN0IG9uZSBvZiB0aGVzZSB2YXJpYWJsZXMgdG8gcHJlZGljdCBhIHBlcnNvbnMgd2FnZSB3aWxsIG5vdCBiZSB0aGF0IGFjY3VyYXRlLgpVc2luZyBhbGwgb2YgdGhlbSB3aWxsIHByb2JhYmx5IGJlIG1vcmUgYWNjdXJhdGUuIAoKV2UgY2FuIHVzZSBsaW5lYXIgcmVncmVzc2lvbiB0byBwcmVkaWN0IGEgcGVyc29uIHdhZ2UgZnJvbSB0aGVzZSBvdGhlciB2YXJpYWJsZXMuIApUaGlzIGlzIHN1cGVydmlzZWQgbGVhcm5pbmcgYmVjYXVzZSBpdCBoYXMgY2xlYXIgaW5wdXRzIGFuZCBvdXRwdXRzLiAKSXRzIGFsc28gY29uc2lkZXJlZCBhIHJlZ3Jlc3Npb24gcHJvYmxlbSBiZWNhdXNlIGl0IGludm9sdmVzIHByZWRpY2l0aW5nIGEgKipjb250aW51b3VzKiogb3IgKipxdWFudGl0YXRpdmUqKiBvdXRwdXQgdmFsdWUuIApXZSB3aWxsIGxlYXJuIGEgbG90IG1vcmUgYWJvdXQgdGhpcyBpbiAqKkNoYXB0ZXIgMyoqLgoKSWRlYWxseSwgd2hlbiB3ZSBhY3R1YWxseSB0cnkgdG8gZmlndXJlIHRoaXMgb3V0LCB3aWxsIHRha2UgaW50byBhY2NvdW50IHRoYXQgd2FnZSBhbmQgYWdlIGhhdmUgYSBub24tbGluZWFyIHJlbGF0aW9uc2hpcC4gVGhpcyBpcyBkaXNjdXNzZWQgbW9yZSBpbiAqKkNoYXB0ZXIgNyoqCgojIyBTdG9jayBNYXJrZXQgRGF0YQpXaXRoIHRoZSB3YWdlIGRhdGEgc2V0IHdlIHdhbnRlZCB0byBwcmVkaWN0IGEgY29udGludW91cyB2YXJpYWJsZS4gCldpdGggdGhlIHN0b2NrIG1hcmtlZCBkYXRhIHdlIHdhbnQgdG8gcHJlZGljdCBhICoqY2F0ZWdvcmljYWwqKiB2YXJpYWJsZS4gClRoaXMgaXMgYSBub24tbnVtZXJpY2FsLCBsaWtlLi4uIHVwIG9yIGRvd24uIDogKSAKSW5zdGVhZCBvZiBxdWFuaXRpdGF0aXZlLCBpdHMgYSAqKnF1YWxpdGF0aXZlKiogb3V0dXQuIApXZSB3aWxsIGV4YW1pbmUgdGhpcyBtb3JlIGluICoqQ2hhcHRlciA0KioKVGhpcyBpcyBjb25zaWRlcmVkIGEgKipjbGFzc2lmaWNhdGlvbioqIHByb2JsZW0uIApJbiB0aGUgY2FzZSBvZiB0aGUgc3RvY2sgbWFya2V0LCB0aGlzIHdvdWxkIGJlIGEgdmVyeSB1c2VmdWwgdGhpbmcgdG8gZ2V0IHJpZ2h0IQoKTGV0cyB0YWtlIGEgcXVpY2sgbG9vayBhbmQgc2VlIGlmIHdlIGNhbiBzdHJpa2UgYSBqYWNrcG90LiAKCmBgYHtyLCBldmFsPVQsIGVjaG89VCwgY2FjaGU9VCwgbWVzc2FnZT1GLCB3YXJuaW5nPUZ9CgpzdHIoU21hcmtldCkKaGVhZChTbWFya2V0KQoKYGBgCgpTbyB3ZSBjYW4gc2VlIGhvdyBtdWNoIHRoZSBtYXJrZXQgd2VudCB1cCBvbiBhIGdpdmVuIGRheSBhbmQgd2hhdCB0aGUgY2hhbmdlcyB3ZXJlIG9uIHRoZSBwcmV2aW91cyA1IGRheXMuIApNYXliZSB0aGVyZSBpcyBhIG1hZ2ljIHRyZW5kIQoKYGBge3IsIGV2YWw9VCwgZWNobz1ULCBjYWNoZT1ULCBtZXNzYWdlPUYsIHdhcm5pbmc9Rn0KClNtYXJrZXQgJT4lIAogIG11dGF0ZSh5ZXN0ZXJkYXkgPSBpZmVsc2UoTGFnMSA+IDAsICdVcCcsICdEb3duJykpICU+JQogIGdndmlzKH55ZXN0ZXJkYXksIH5Ub2RheSkgJT4lIAogIGxheWVyX2JveHBsb3RzKAogICAgZmlsbCA9IH55ZXN0ZXJkYXkKICApCgpTbWFya2V0ICU+JSAKICBtdXRhdGUodHdvX2RheXNfcHJldiA9IGlmZWxzZShMYWcyID4gMCwgJ1VwJywgJ0Rvd24nKSkgJT4lCiAgZ2d2aXMofnR3b19kYXlzX3ByZXYsIH5Ub2RheSkgJT4lIAogIGxheWVyX2JveHBsb3RzKAogICAgZmlsbCA9IH50d29fZGF5c19wcmV2CiAgKQoKU21hcmtldCAlPiUgCiAgbXV0YXRlKHRocmVlX2RheXNfcHJldiA9IGlmZWxzZShMYWczID4gMCwgJ1VwJywgJ0Rvd24nKSkgJT4lCiAgZ2d2aXMofnRocmVlX2RheXNfcHJldiwgflRvZGF5KSAlPiUgCiAgbGF5ZXJfYm94cGxvdHMoCiAgICBmaWxsID0gfnRocmVlX2RheXNfcHJldgogICkKCgpgYGAKClByZXR0eSBtdWNoIG5vLiBKdXN0IGZyb20gbG9va2luZyBhdCB0aGUgYm94IHBsb3RzIGl0cyBub3QgY2xlYXIgdGhhdCB0aGUgbWFya2V0IHdpbGwgZ28gdXAgb3IgZG93biB0b2RheSBiYXNlZCBvbiB3aGF0IGl0IGRpZCBpbiBhbnkgb2YgdGhlIHByZXZpb3VzIDMgZGF5cy4gQWxyaWdodCwgd2UnbGwgaGF2ZSB0byBsZWFybiBtb3JlIGluIENoYXB0ZXIgNCBJIGd1ZXNzIHdoZW4gd2UgZXhhbWluZSBkaWZmZXJlbnQgc3RhdGlzdGljYWwgbWV0aG9kcyBmb3IgcHJlZGljdGluZyB0aGUgY2hhbmdlLiAKCiMjIEdlbmUgRXhwcmVzc2lvbiBEYXRhCgpUaGUgbGFzdCB0d28gZGF0YXNldHMgYm90aCBpbnZvbHZlZCBpbnB1dCBhbmQgb3V0cHV0IHZhcmlhYmxlcy4gV2l0aCB0aGUgR2VuZSBkYXRhc2V0IHdlIGhhdmUgbm8gY29ycmVzcG9uZGluZyBvdXRwdXQgdGhhdCB3ZSBhcmUgdHJ5aW5nIHRvIHByZWRpY3QuIFdlIGp1c3QgaGF2ZSB0aGUgZGF0YSBhbmQgd2FudCB0byB1bmRlcnN0YW5kIGhvdyB0aGUgZGF0YSBwb2ludHMgcmVsYXRlIHRvIGVhY2ggb3RoZXIuIApMaWtlLCBtYXliZSB5b3UgaGF2ZSBkZW1vZ3JhcGhpYyBkYXRhIG9mIHlvdXIgdXNlciBhcHBzIHVzZXIgYmFzZSBhbmQgd2FudCB0byBzZWUgaG93IHNvbWUgb2YgdGhlIHVzZXJzIGFyZSBzaW1pbGFyIHRvIG90aGVycy4gClRoaXMgaXMga25vd24gYXMgYSAqKmNsdXN0ZXJpbmcqKiBwcm9ibGVtLiAKV2UnbGwgdGFsayBtb3JlIGFib3V0IHRoaXMgaW4gKipDaGFwdGVyIDEwKiouClRoZSB2aXN1YWxpemF0aW9ucyBvZiB0aGlzIHR5cGUgb2YgZGF0YSBhcmUgb2Z0ZXIgbW9yZSBhZHZhbmNlZC4gSSBjYW4ndCBkbyBpdCB5ZXQgYnV0IGhvcGVmdWxseSBJIGxlYXJuIGhvdyBhZnRlciByZWFkaW5nIHRoZSBsYXRlciBjaGFwdGVycy4KCiMjIEEgQnJpZWYgSGlzdG9yeSBvZiBTdGF0aXN0aWNhbCBMZWFybmluZwpMZWFzdCBzcXVhcmVzIHdhcyB0aGUgZmlzdCBpbXBsZW1lbnRhdGlvbiBvZiB3aGF0IHdlIG5vdyBjYWxsIGxpbmVhciByZWdyZXNzaW9uLiBTb21lIGR1ZGVzIGNyZWF0ZWQgaXQgaW4gdGhlIGVhcmx5IG5pbmV0ZWVudGggY2VudHJ5LiBOQkQuCkxvZ2lzdGljIHJlZ3Jlc3Npb24gb3IgcHJlZGljaXRpbmcgYSBjYXRlZ29yaWNhbCB2YXJpYWJsZSwgd2FzIGRldmVsb3BlZCBpbiB0aGUgMTk0MHMuIApCeSB0aGUgMTk3MCB0aGVyZSB3ZXJlIG1hbnkgbWV0aG9kcyBmb3IgbGVhcm5pbmcgZnJvbSBkYXRhLCBidXQgdGhleSB3ZXJlIG1vc3RseSBsaW5lYXIgbWV0aG9kcy4gRml0dGluZyBub24tbGluZWFyIHJlbGF0aW9uc2hpcHMgd2FzIHN0aWxsIHRvbyBjb21wdXRhdGlvbmFsbHkgZXhwZW5zaXZlLiBPbmNlIGNvbXB1dGluZyBwb3dlciBpbmNyZWFzZWQsIGluIHRoZSAxOTgwcywgY2xhc2lpZmljYXRpb24gYW5kIHJlZ3Jlc3Npb24gdHJlZXMgd2VyZSBpbnRyb2R1Y3RlZC4gCk5vdyB3ZSBoYXZlIG1hY2hpbmUgbGVhcm5pbmcgYW5kIHN0YXRpc3RpY2FsIGxlYXJuaW5nIGlzIGlzIG93biBzdWJmaWVsZCBvZiBzdGF0aXN0aWNzLiAKCiMjIFRoaXMgQm9vawpJdHMgcG9wdWxhciBiZWNhdXNlIG9mIGl0cyB0b3BpY2FsIGFwcHJvYWNoLiBBbHNvIGl0cyB1bmRlcnN0YW5kYWJsZSBieSBhIHdpZGUgYXVkaWVuY2UuIApBdCBvbmUgdGltZSBvbmx5IHN0YXRpc3RpYW4gZXhwZXJ0cyBjb3VsZCBhcHBseSBzdGF0aXN0aWNhbCBhcHByb2FjaGVzIHRvIGRhdGFzZXRzLCBidXQgd2l0aCB0aGUgYXZhaWxhYmlsaXR5IG9mIG1hbnkgc29mdHdhcmUgdG9vbHMgbm93IGl0cyBwb3NzaWJsZSBmb3IgcGVvcGxlIGZyb20gbWFueSBiYWNrZ3JvdW5kcyB0byBhcHBseSBzdGF0aXN0aWNhbCBhcHByb2FjaGVzIHRvIGxlYXJuIGZyb20gZGF0YXNldHMgaW4gbWFueSBmaWVsZHMuIExpa2UgbWUgSSBndWVzcy4gSSdtIGhvcGluZyB0byBkbyBzb21ldGhpbmcgdXNlZnVsIHdpdGggaXQgYWZ0ZXIgc3R1ZHlpbmcgaXQgZm9yIGFib3V0IGEgbW9udGguIAoKVGhlIGF1dGhvcnMgc2F5Li4uICJJdCBpcyBpbXBvcnRhbnQgZm9yIHRoaXMgZGl2ZXJzZSBncm91cCB0byBiZSBhYmxlIHRvIHVuZGVyc3RhbmQgdGhlIG1vZGVscywgaW50dWl0aW9ucywgYW5kIHN0cmVuZ3RocyBhbmQgd2Vha25lc3NlcyBvZiB0aGUgdmFyaW91cyBhcHByb2FjaGVzLiBCdXQgZm9yIHRoaXMgYXVkaWVuY2UsIG1hbnkgb2YgdGhlIHRlY2huaWNhbCBkZXRhaWxzIGJlaGluZCBzdGF0aXN0aWNhbCBsZWFybmluZyBtZXRob2RzLCBzdWNoIGFzIG9wdGltaXphdGlvbiBhbGdvcml0aG1zIGFuZCB0aGVvcmV0aWNhbCBwcm9wZXJ0aWVzLCBhcmUgbm90IG9mIHByaW1hcnkgaW50ZXJlc3QuIiBDaGEgQnJhaC4gWW91IGFyZSByaWdodCBhYm91dCB0aGF0LiAKClRoZXJlIGFyZSBzb21lIHByZW1pc2VzIHRoYXQgdGhlIGF1dGhvcnMgYmVsaWV2ZToKCiAgLSBNYW55IHN0YXRpc3RpY2FsIGxlYXJuaW5nIG1ldGhvZHMgYXJlIHJlbGV2YW50IGFuZCB1c2VmdWwgaW4gYSB3aWRlIHJhbmdlIG9mIGFjYWRlbWljIGFuZCBub24tYWNhZGVtaWMgZGlzY2lwbGluZXMsIGJleW9uZCBqdXN0IHRoZSBzdGEtIHRpc3RpY2FsIHNjaWVuY2VzLiAKICAgIC0gTGluZWFyIHJlZ3Jlc3Npb24gaXMgdGhlIG9yaWdpbmFsIGdhbmdzdGVyLCB0aGUgaGFtbWVyLiBCdXQgc2Nyd2RyaXZlcnMgYW5kIHNhd3MsIGFuZCBvdGhlciB0b29scyBhcmUgdXNlZnVsIHRvbyBhbmQgd2lkZWx5IGF2YWlsYWJsZSB0b2RheS4gQnV0IGxlYXJuaW5nIGV2ZXJ5IHBvc3NpYmxlIHRvb2wgYW5kIHZhcmlhdGlvbiBpcyBub3QgbmVjZXNzYXJ5IHRvIGJ1aWxkIGEgdGFibGUuIFRoaXMgYm9vayBmb2N1c2VzIG9uIHRoZSBtYWluIHRvb2xzLiAKICAtIFN0YXRpc3RpY2FsIGxlYXJuaW5nIHNob3VsZCBub3QgYmUgdmlld2VkIGFzIGEgc2VyaWVzIG9mIGJsYWNrIGJveGVzLiAKICAgIC0gWW91IGRvbid0IG5lZWQgdG8ga25vdyBob3cgZWFjaCBjb2cgaW4gdGhlIHRoZSBib3ggd29ya3MgdG8ga25vdyBpdCBpcyB0aGUgcmlnaHQgYm94IHRvIHVzZSBmb3IgdGhlIGpvYi4gTGlrZSBhIGRyaWxsIG9yIGEgdG9vdGggYnJ1c2guIAogIC0gV2hpbGUgaXQgaXMgaW1wb3J0YW50IHRvIGtub3cgd2hhdCBqb2IgaXMgcGVyZm9ybWVkIGJ5IGVhY2ggY29nLCBpdCBpcyBub3QgbmVjZXNzYXJ5IHRvIGhhdmUgdGhlIHNraWxscyB0byBjb25zdHJ1Y3QgdGhlIG1hY2hpbmUgaW5zaWRlIHRoZSBib3ghICAgICAtIEluIG90aGVyIHdvcmRzLCB5b3UgZG8gbm90IG5lZWQgYSBQaEQgaW4gdG9vdGhicnVzaGVzIHRvIGtub3cgaG93IHRvIHVzZSBvbmUuIFRoaXMgYm9vayBhdm9pZHMgbWF0cml4IGFsZ2VicmEuIFlheSEgCiAgLSBXZSBwcmVzdW1lIHRoYXQgdGhlIHJlYWRlciBpcyBpbnRlcmVzdGVkIGluIGFwcGx5aW5nIHN0YXRpc3RpY2FsIGxlYXJuaW5nIG1ldGhvZHMgdG8gcmVhbC13b3JsZCBwcm9ibGVtcy4gCiAgICAtIEkgbWVhbiwgc29tZSBwZW9wbGUgbWlnaHQganVzdCB3YW50IHRvIGxlYXJuIHRoaXMgc3R1ZmYgZm9yIGZ1biwgYnV0IEkganVzdCB3YW50IHRvIGRvIGl0IHNvIEkgY2FuIHNvbHZlIGJ1c2luZXNzIHByb2JsZW1zIGFuZCBtYWtlIG1vbmV5IGRvaW5nIGl0LiBJIGd1ZXNzIHRoYXRzIHRoZSByZWFsIHdvcmxkLiBSIGNhbiBoYW5kbGUgZXZlcnkgbWV0aG9kIGluIHRoaXMgYm9vayBhbmQgaXRzIGZyZWUsIHNvIGl0cyB1c2VkIHRvIHNvbHZlIHRoZW0uIENvb2wuIEFsc28sIHRoaXMgaXMgdGhlIGxhbmd1YWdlIG9mIGNob2ljZSBmb3IgYWNlZGVtaWMgc3RhdGlzdGljaWFucyBhbmQgbmV3IGFwcHJvYWNoZXMgYXJlIGFsd2F5cyBhdmFpbGFibGUgaGVyZSBmaXJzdC4gCiAgICAKIyMgV2hvIHNob3VsZCByZWFkIHRoaXMgYm9vaz8KCgoKCgo=</div>
 
 
 
