@@ -1,7 +1,7 @@
 ---
-title: "Chapter 2"
+title: "Chapter 2 - Statistical Learning Notes"
 author: "William Surles"
-date: "Feb 08, 2017"
+date: "April 12, 2017"
 output:
   html_document: default
   html_notebook:
@@ -10,30 +10,71 @@ output:
     theme: flatly
 ---
 
+***
+> This document was updated on **`r Sys.Date()`**.
+
+***
+
+## Intro
+
+  - Welp. Lets just get through all the code example.
+  - I spend too long talking if I start so I'm just gonna do the code and I will
+come back and add notes if I need to.
+  - The book has the best notes. : )
+  - Really, this doc is jut a reference for me to use later
+
 ```{r set-options, eval=T, echo=F, cache=F}
 
-knitr::opts_chunk$set(fig.width=6, fig.height=4)
+knitr::opts_chunk$set(eval=T, echo=T, cache=T, message=F, warning=F)
 
 ```
 
-```{r, eval=T, echo=F, cache=F, message=F, warning=F}
+
+```{r}
 
 library(stringr)
 
 ```
 
-## Chapter 2
 
-`c` is for concatenate, forming a vector `x`
+## 2.1 What is Statistical Learning?
+
+## 2.2 Assessing Model Accuracy
+
+## 2.3 Lab: Intro to R
+
+### 2.3.1 Basic Commands
+
+`c()` combines its inputs into a vector
 
 ```{r}
+
 x <- c(1,3,2,5)
 x
+
+```
+
+The `=` symbol works too
+
+```{r}
+
+y = c(1,4,3)
+y
+
+```
+
+Use `?` to get help
+
+``` {r, message=T}
+
+print(?c)
+
 ```
 
 The '+' function will add arrays by index (they must have the same length)
 
 ```{r}
+
 x <- c(1,6,2)
 y <- c(1,4,3)
 x + y

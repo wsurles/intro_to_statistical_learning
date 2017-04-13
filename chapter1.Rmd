@@ -12,15 +12,16 @@ output:
 
 ```{r set-options, eval=T, echo=F, cache=F}
 
-knitr::opts_chunk$set(fig.width=6, fig.height=4)
+knitr::opts_chunk$set(eval=T, echo=T, cache=T, message=F, warning=F)
 
 ```
 
-```{r, eval=T, echo=T, cache=F, message=F, warning=F}
+```{r, cache=F, message=F, warning=F}
 
 library(ISLR)
 library(dplyr)
 library(ggvis)
+
 
 ```
 
@@ -46,7 +47,7 @@ head(Wage)
 ```
 
 We would like to be able to predict the persons wage based on the other variables.
-From charting the data we can see that wage increases with age, up to about 60 year old, than drops. 
+From charting the data we can see that wage increases with age, up to about 40 years old, is steady until 60 years old, than drops. The blue line, which estimates average wage for a given age, makes this a little clearer. 
 
 ```{r, eval=T, echo=T, cache=T, message=F, warning=F}
 
@@ -91,8 +92,9 @@ Wage %>%
 
 ```
 
-Using just one of these variables to predict a persons wage will not be that accurate.
-Using all of them will probably be more accurate. 
+Using just one of these variables to predict a persons wage will not be that accurate. 
+For example, you could just use age to predict wage, but from the scatter chart above its clear that wage can vary a great deal at any age. Its just the average value that shows the trend. So predicitng wage, solely based on age will not be very accurate. 
+Using all of the information that shows a trend will probably be more accurate. 
 
 We can use linear regression to predict a person wage from these other variables. 
 This is supervised learning because it has clear inputs and outputs. 
@@ -106,7 +108,7 @@ With the wage data set we wanted to predict a continuous variable.
 With the stock marked data we want to predict a **categorical** variable. 
 This is a non-numerical, like... up or down. : ) 
 Instead of quanititative, its a **qualitative** outut. 
-We will examine this more in **Chapter 4**
+We will examine this more in **Chapter 4**. 
 This is considered a **classification** problem. 
 In the case of the stock market, this would be a very useful thing to get right!
 
@@ -119,8 +121,9 @@ head(Smarket)
 
 ```
 
-So we can see how much the market went up on a given day and what the changes were on the previous 5 days. 
-Maybe there is a magic trend!
+So we can see how much the market went up on a given day and what the changes were on the previous 5 days.  
+
+Maybe there is a magic trend just looking at specific day periods!
 
 ```{r, eval=T, echo=T, cache=T, message=F, warning=F}
 
@@ -153,34 +156,74 @@ Pretty much no. Just from looking at the box plots its not clear that the market
 ## Gene Expression Data
 
 The last two datasets both involved input and output variables. With the Gene dataset we have no corresponding output that we are trying to predict. We just have the data and want to understand how the data points relate to each other. 
-Like, maybe you have demographic data of your user apps user base and want to see how some of the users are similar to others. 
+Like, maybe you have demographic data of your applications userbase and want to see how some of the users are similar to others. 
 This is known as a **clustering** problem. 
 We'll talk more about this in **Chapter 10**.
-The visualizations of this type of data are ofter more advanced. I can't do it yet but hopefully I learn how after reading the later chapters.
+The visualizations of this type of data (well, mostly the analysis that goes into the visualization, like picking which group a point belongs in) are ofter more advanced. I can't do it yet but hopefully I learn how after reading the later chapters.
 
 ## A Brief History of Statistical Learning
+
 Least squares was the fist implementation of what we now call linear regression. Some dudes created it in the early nineteenth centry. NBD.
 Logistic regression or prediciting a categorical variable, was developed in the 1940s. 
-By the 1970 there were many methods for learning from data, but they were mostly linear methods. Fitting non-linear relationships was still too computationally expensive. Once computing power increased, in the 1980s, clasiification and regression trees were introducted. 
-Now we have machine learning and statistical learning is is own subfield of statistics. 
+By the 1970s there were many methods for learning from data, but they were mostly linear methods. Fitting non-linear relationships was still too computationally expensive. Once computing power increased, in the 1980s, clasification and regression trees were introducted. 
+Now we have machine learning and statistical learning is its own subfield of statistics. And these are pretty useful skills for a variety of business applications I should add. Data Science is hot right now. 
 
 ## This Book
-Its popular because of its topical approach. Also its understandable by a wide audience. 
+
+According to the authors, this book is popular because:
+  
+  - It has a clear topical approach. 
+  - Its written to be understandable by a wide audience. 
+  - It was one of the first comprehensive books on statistical machine learning method and is an important reference.   
+
 At one time only statistian experts could apply statistical approaches to datasets, but with the availability of many software tools now its possible for people from many backgrounds to apply statistical approaches to learn from datasets in many fields. Like me I guess. I'm hoping to do something useful with it after studying it for about a month. 
+
+And I will of course make heavy use of R and Python packages that have the methods built in. I'm not going to program the methods myself, like the statitistions did originally. 
 
 The authors say... "It is important for this diverse group to be able to understand the models, intuitions, and strengths and weaknesses of the various approaches. But for this audience, many of the technical details behind statistical learning methods, such as optimization algorithms and theoretical properties, are not of primary interest." Cha Brah. You are right about that. 
 
 There are some premises that the authors believe:
 
-  - Many statistical learning methods are relevant and useful in a wide range of academic and non-academic disciplines, beyond just the sta- tistical sciences. 
-    - Linear regression is the original gangster, the hammer. But scrwdrivers and saws, and other tools are useful too and widely available today. But learning every possible tool and variation is not necessary to build a table. This book focuses on the main tools. 
+  - Many statistical learning methods are relevant and useful in a wide range of academic and non-academic disciplines, beyond just the statistical sciences. 
+    - Linear regression is the original gangster, the hammer. But scerwdrivers and saws, and other tools are useful too and widely available today. Learning every possible tool and variation is not necessary to build a table. This book focuses on the main tools. 
   - Statistical learning should not be viewed as a series of black boxes. 
-    - You don't need to know how each cog in the the box works to know it is the right box to use for the job. Like a drill or a tooth brush. 
-  - While it is important to know what job is performed by each cog, it is not necessary to have the skills to construct the machine inside the box!     - In other words, you do not need a PhD in toothbrushes to know how to use one. This book avoids matrix algebra. Yay! 
+    - You don't need to know how each cog in the the box works to know it is the right box to use for the job. Like a drill or a tooth brush. But you do need to know which to use. They cover the model, intuitions, assumptions, and trade offs between the different models. 
+  - While it is important to know what job is performed by each cog, it is not necessary to have the skills to construct the machine inside the box!     
+    - In other words, you do not need a PhD in toothbrushes to know how to use one. This book avoids matrix algebra. Yay! 
   - We presume that the reader is interested in applying statistical learning methods to real-world problems. 
-    - I mean, some people might just want to learn this stuff for fun, but I just want to do it so I can solve business problems and make money doing it. I guess thats the real world. R can handle every method in this book and its free, so its used to solve them. Cool. Also, this is the language of choice for acedemic statisticians and new approaches are always available here first. 
+    - I mean, some people might just want to learn this stuff for fun, but I just want to do it so I can solve real business problems and make money doing it. I guess thats the real world. 
+    - R can handle every method in this book and its free, so its used to solve them. Cool. Also, this is the language of choice for acedemic statisticians and new approaches are always available here first. 
     
-## Who should read this book?
+## Who Should Read this Book
+
+  - Anyone who is interested in using modern statistical methods for modeling and prediction from data.
+  - They asuume you have had at least one course in statistics. 
+    - Mine was for ever ago and I remember very little, but I'll catchup on anything that is confusing on Kahn Academy. 
+  - Again they do not go too deep into the math and you don't need advanced knowledge of matrix operations. 
+  - The focus is on using R, so you should be into that. Previous exposure to R, matlab, or python is helpful but not required. 
+  - They use this material to teach at a masters and PhD level in a variety of fields.
+  - ESL is the more math heavy book. So read that if you really want math behind the methods. ISL (this one) focuses on the computational aspects of the approaches. 
+  
+## Notaion and simple Matrix Algebra
+
+  - *n* represents observations
+  - *p* represents variables
+  - These are represented in matrix from as xij 
+    - i is used to index the sample of observations (n). i = 1:n 
+    - j is used to index the variables (p).  j = 1:p
+  - Think of the matrix X (n x p) as a spreadsheet with n rows and p columns
+    - Or, in my experience, its usually a dataframe or table in a database
+  - Vectors are represented as columns.
+    - We will eather look at all obesrations of one variable or we will look at all variables for a given observation.
+    - These are represented differently. 
+  - There is more on notation, but I'll come back and add it if it seems useful. Lets get to some examples. 
+  - A little basis on matrix algebra would be helpful. 
+  
+## Conclusion
+
+Okay this was interesting. The distinction in the problem types was helpful. 
+But lets get on with it and write some code we can really use. 
+Chapter 2
 
 
 
