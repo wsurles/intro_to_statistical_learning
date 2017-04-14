@@ -63,13 +63,7 @@ y
 
 ```
 
-Use `?` to get help
-
-``` {r, message=T}
-
-print(?c)
-
-```
+Use `?c` to get help with the `c()` or any function.  j
 
 The '+' function will add arrays by index (they must have the same length)
 
