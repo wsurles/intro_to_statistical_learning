@@ -63,7 +63,7 @@ y
 
 ```
 
-Use `?c` to get help with the `c()` or any function.  j
+Use `?c` to get help with the `c()` or any function. 
 
 The '+' function will add arrays by index (they must have the same length)
 
