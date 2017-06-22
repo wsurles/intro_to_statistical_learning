@@ -400,12 +400,13 @@ identify(horsepower, mpg, name)
   - You just need a function that describes what to print and how
   - then you call that function in the `add_tooltip` function. 
   - There rae plenty of examples to follow
+  - This only seems to work in an interactive context so essentially it needs to use the shiny app
   
 ```{r}
 
 all_values <- function(x) {
   if(is.null(x)) return(NULL)
-  str_c(names(x), ": ", format(x), collapse = "<br />")
+  str_c(names(x), ": ", format(x), collapse = '<br>')
 }
 
 df_auto %>%
@@ -422,36 +423,20 @@ df_auto %>%
 
 ```{r}
 
-
+summary(df_auto)
+summary(df_auto$mpg)
 ```
 
+  - since all of the analysis here is reproducible with the code, I don't save the workspace. 
+    - It might be nice to do this if there is data that took a long time to get, but in that case I would just save the data. It all pretty fast to load once on the local machine
+  - I also don't use `savehistory()` or `loadhistory()` since I work in the editor or in this case in an r notebook. 
+    - the author was using the r command line so this would have been helpful. 
+    - would highly recommend using Rstudio and rmarkdown files (or notebooks) over using the r command line. 
+    
+## Thoughts
 
-
-```{r}
-
-
-```
-
-
-```{r}
-
-
-```
-
-
-```{r}
-
-
-```
-
-
-```{r}
-
-
-```
-
-
-```{r}
-
-
-```
+  - This section does introduce the reader to some interesting function in R.
+  - Its clear that this was written decades ago.
+  - R has come a long way with data analysis functions and I try to point to some of the more useful libraries here
+  - I'm looking forward to getting to the statistical learning.
+  
