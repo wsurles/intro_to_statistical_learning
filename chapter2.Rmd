@@ -1,7 +1,6 @@
 ---
 title: "Chapter 2 - Statistical Learning Notes"
 author: "William Surles"
-date: "April 12, 2017"
 output:
   html_document: default
   html_notebook:
@@ -17,7 +16,7 @@ output:
 
 ## Intro
 
-  - Welp. Lets just get through all the code example.
+  - Welp. Lets just get through all the code examples.
   - I spend too long talking if I start so I'm just gonna do the code and I will
 come back and add notes if I need to.
   - The book has the best notes. : )
@@ -33,6 +32,10 @@ knitr::opts_chunk$set(eval=T, echo=T, cache=T, message=F, warning=F)
 ```{r}
 
 library(stringr)
+library(readr)
+library(dplyr)
+library(ggvis)
+library(ISLR)
 
 ```
 
@@ -43,9 +46,11 @@ library(stringr)
 
 ## 2.3 Lab: Intro to R
 
+***
+
 ### 2.3.1 Basic Commands
 
-`c()` combines its inputs into a vector
+  - `c()` combines its inputs into a vector
 
 ```{r}
 
@@ -54,7 +59,7 @@ x
 
 ```
 
-The `=` symbol works too
+  - The `=` symbol works too
 
 ```{r}
 
@@ -63,36 +68,390 @@ y
 
 ```
 
-Use `?c` to get help with the `c()` or any function. 
-
-The '+' function will add arrays by index (they must have the same length)
+  - Use `?c` to get help with the `c()` or any function. 
+  - The '+' function will add arrays by index (they must have the same length)
+  - `?length` to see what the `length` function does. Or any function.
 
 ```{r}
 
 x <- c(1,6,2)
 y <- c(1,4,3)
+length(x)
+length(y)
 x + y
 
 ```
 
+  - `ls()` allows you to look at a list of all objects.
+  - `rm()` is used to delete objects 
+    - I rarely do this. 
+  
 ```{r}
+ls()
+rm(x,y)
+ls()
+
+```
+
+  - Remove all objects
+
+```{r}
+rm(list=ls())
+```
+
+  - `matrix()` will create a matrix
+    - it needs 3 arguments, the data, the # of rows, and # of columns
+    - by default it will create the matrix by columns, left to right
+
+```{r}
+x = matrix(data=c(1,2,3,4), nrow = 2, ncol = 2)
+x
+```
+
+  - you don't need to give the names of the arguments
+  - you can change all of the default arguments, for example build a matrix by row, rathter than by column
+  - if you do not assign the matrix to a variable, it will just create it and print it to the screen
+  
+```{r}
+x = matrix(c(1,2,3,4), 2, 2, byrow=T)
+x
+```
+
+  - `sqrt()` will work on each element of the matrix
+  - `x^2` will square each element of the matrix
+  
+```{r}
+sqrt(x)
+x^2
+```
+
+  - `rnorm` creates a vetor or random values sampled from the normal distribution
+  - we get a different sample each time we call the function
+  - we can change the values of the normal distribution. 
+  - By default the mean is zero and sd is 1
+  - `cor` will compute the correlation between two vectors
+  
+```{r}
+x = rnorm(50)
+y = x + rnorm(50, mean=50, sd = .1)
+cor(x,y)
+```
+
+  - `set.seed` will allow you to create the exact same set of random numbers
+  - this is great for teaching as it lets others get the same set of random numbers in the next functinos
+  
+```{r}
+set.seed(1303)
+rnorm(50)
+```
+  
+  - `mean` calculates the mean of a vector of numbers
+  - `var` calculates the variance of a vector of numbers
+  
+```{r}
+set.seed(3)
+y = rnorm(100)
+mean(y)
+var(y)
+
+# calculate standard deviation
+sqrt(var(y))
+sd(y)
+```
+
+***
+
+### 2.3.2 Graphics
+
+  - I will probably use ggvis for all plots rather than base R. 
+  - It is a big improvement on grammar and functionality
+  - There may be some special R plots I may need to use occasionaly, but it seems to be rare.
+
+```{r}
+x = rnorm(100)
+y = rnorm(100)
+plot(x,y)
+plot(x,y, 
+     xlab = "this is the x-axis",
+     ylab = "this is the y-axis",
+     main = "Plot of X vs Y"
+     )
+```
+
+  - similar plot but with ggvis
+  
+```{r}
+
+data.frame(x=rnorm(100), y=rnorm(100)) %>% 
+  ggvis(~x, ~y) %>%
+  layer_points(fill := "blue")
+
+```
+  
+  - you can save the output of an R plot 
+  - you can use`pdf()` or `jpeg()`
+  - `system` lets you can run a system command on the computer
+    - here I make a separat folder to put images
+    - `dev.off` says we are done creating the plot
+  - these steps are useful to share the analysis results in an image in an automated way
+    - once you have created an analysis and explained it, it may be useful to send updated results on a daily basis to a location. 
+    - images are nice becasue they can easily be shared in an iframe or flow and be quickly viewed 
+  
+```{r}
+system("mkdir images")
+pdf("images/Figure.pdf")
+plot(x,y,col="green")
+dev.off()
+```
+
+  - `?seq` creates a sequence of numbers
+  - There are many option to control length and step size
+  
+```{r}
+
+x = seq(1:10)
+x
+
+## This is a shortcut
+x = 1:10
+x
+
+x = seq(-pi, pi, length=20)
+x
+
+```
+
+  - `contour` creates a contour plot of 3 dimensional data (like topographic map)
+  - it takes an x, y, and z argument corresponding to x,y positions
+  - there are many arguments to fine tune the plot
+  
+```{r}
+y = x
+f = outer(x, y, function(x,y) cos(y)/(1+x^2))
+contour(x,y,f)
+
+contour(x,y,f,nlevels=45, add=T)
+
+fa = (f-t(f))/2
+contour(x,y,fa, nlevels=15)
+
+```
+
+  - `image` works like contour, but it uses colors like a heatmap
+  - `persp` creates a 3D plot. THeta and phi control the viewing angle
+  
+```{r}
+
+image(x,y,fa)
+persp(x,y,fa)
+persp(x,y,fa, theta=30)
+persp(x,y,fa, theta=30, phi=20)
+persp(x,y,fa, theta=30, phi=70)
+persp(x,y,fa, theta=30, phi=40)
+
+```
+
+***
+### 2.3.3 Indexing Data
+  - The book just covers matrices
+  - It works similar for vectors, and dataframes.
+  - I will mostly be working with dataframes so I added some exampoles here
+
+```{r}
+A = matrix(1:16,4,4)
+A
+A[2,3]
+A[c(1,3), c(2,4)]
+A[1:3,2:4]
+A[1:2,]
+A[,1:2]
+A[1,]
+A[-c(1,3),]
+dim(A)
+```
+
+  - All of these work on a data frame also
+  - dataframes can also be indexed by column names which reads a little cleaner
+  
+```{r}
+df <- data.frame(a=1:4, b=5:8, c=9:12, d=13:16)
+df
+df[2,3]
+df[c(1,3), c(2,4)]
+df[1:3,2:4]
+df[1:2,]
+df[1:2] ## it defaults to the columns if you do not put in the ,
+df[,1:2]
+df[1,]
+df[-c(1,3),]
+dim(df)
+
+df$a
+df[c('a','b')]
+df[1:2, c('a','b')]
+df[c(1,4), c('a','d')]
+
+```
+
+***
+### 2.3.4 Loading Data
+
+  - I will probably only use readr since it is a newer library that replaces a lot of the code in this section
+  - Auto is already part of the ISLR library so I don't need to load it
+  - `fix` opens a spreadsheet viewer but its really slow
+    - This has been replaced by the variable viewer built into R studio
+  - `read_csv` is the kef function. It has many arguments to customize loading the data, but its defaults do a great job and make life easy. In most cases it does exactly what you would want. 
+  
+```{r}
+
+## This just needs to be run the first time
+# system("mkdir data")
+# write_csv(Auto, "data/Auto.csv")
+
+df_auto <- read_csv("data/Auto.csv")
+str(df_auto)
+glimpse(df_auto)
+head(df_auto)
+names(df_auto)
+
+```
+
+***
+### 2.3.5 Aditional Graphical and Numerical Summaries
+
+```{r}
+
+plot(df_auto$cylinders, df_auto$mpg)
+
+```
+
+  - I typically use `ggvis` library for plots or `rcharts` if I want javascript charts. 
+    - The base r plots are often used in old books like this but its worth learning the improved charting libraries.
+  - I also never use `attach` because dplyr and ggvis let me reference the column name directly
+
+```{r}
+
+df_auto %>%
+  ggvis(~cylinders, ~mpg) %>%
+  layer_points(
+    fill := "green",
+    fillOpacity := .4
+    )
+
+```
+
+  - `varwidth=T` makes the box width based on the number of data points in the group I think
+    - Thats one way to add more info to the chart but it does look a little weird. 
+    
+```{r}
+
+df_auto$cylinders <- as.factor(df_auto$cylinders)
+
+plot(df_auto$cylinders, df_auto$mpg)
+plot(df_auto$cylinders, df_auto$mpg, col = 'red', varwidth=T, horizontal=T)
+plot(df_auto$cylinders, df_auto$mpg, col = 'red', varwidth=T, xlab="cylinders", ylab = "MPG")
+
+```
+
+  - Its still a good idea to make the cylnders variable a categorical variable rather than numerical. i.e. make it a factor. 
+    - This lets the boxplot skip the 7 which has no values
+    
+```{r}
+
+df_auto %>%
+  ggvis(~cylinders, ~mpg) %>%
+  layer_boxplots(
+    width = .9,
+    fill := "green",
+    fillOpacity := .4
+    )
 
 ```
 
 
 ```{r}
 
+hist(df_auto$mpg)
+hist(df_auto$mpg, col=2)
+hist(df_auto$mpg, col=2, breaks=15)
+
 ```
+
 
 ```{r}
 
+attach(df_auto)
+pairs(Auto)
+pairs(~ mpg + displacement + horsepower + weight + acceleration)
+
 ```
+
+  - I'm having trouble getting the `identify` function to work 
+    - I think the best way to do this is by adding a tooltip to the ggvis chart
+    
+```{r}
+
+plot(horsepower, mpg)
+identify(horsepower, mpg, name)
+
+```
+  
+  - You can create a tooltip for the ggvis chart pretty easily
+  - You just need a function that describes what to print and how
+  - then you call that function in the `add_tooltip` function. 
+  - There rae plenty of examples to follow
+  
+```{r}
+
+all_values <- function(x) {
+  if(is.null(x)) return(NULL)
+  str_c(names(x), ": ", format(x), collapse = "<br />")
+}
+
+df_auto %>%
+  ggvis(~horsepower, ~mpg) %>%
+  layer_points(
+    fill := "green",
+    fillOpacity := .6
+  ) %>%
+  add_tooltip(all_values, "hover")
+
+```
+
+
 
 ```{r}
 
+
 ```
+
+
 
 ```{r}
 
+
 ```
 
+
+```{r}
+
+
+```
+
+
+```{r}
+
+
+```
+
+
+```{r}
+
+
+```
+
+
+```{r}
+
+
+```
